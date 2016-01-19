@@ -2,34 +2,88 @@
     margin: 0px;
     padding: 0px;
 }
+
+
 body {
     width: 100%;
 }
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img_profile_pic {
+    margin: 30px;
+}
+
 .horizontal {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .vertical {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-img {
-    margin: auto
+.NavButton {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 250px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #CCCCCC;
+    margin: 4px;
+}
+
+#div_code_view {
+    flex-grow: 1;
+}
+
+.CodeView {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: center;
+    height: 300px;
+    border: 2px solid #CCCCCC;
+    margin: 4px;
 }
 
 #the_header {
     background: #2196F3;
-    color: #FFFFFF
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+    font-size: 3em;
+    height: 100px;
+}
+
+#the_footer {
+    background: #B6B6B6;
+    color: #FFFFFF;
+    margin: 8px;
+    padding: 20px;
 }
 
 #div_left_panel {
     text-align: center;
-    width: 330px;
+    justify-content: flex-start;
+    width: 280px;
+    border-right: 2px solid #CCCCCC;
+}
+
+#div_left_panel > p {
+    padding: 25px;
 }
 
 #div_not_panel {
     flex-grow: 1;
+    justify-content: flex-start;
 }
 
 #nav_big_buttons ul {
