@@ -16,6 +16,7 @@ img {
 
 #img_profile_pic {
     margin: 30px;
+    margin-left: 36px;
 }
 
 .horizontal {
@@ -37,12 +38,25 @@ img {
     text-align: center;
     font-size: 2em;
     justify-content: center;
-    border: 2px solid #CCCCCC;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
     margin: 4px;
+    margin-top: 30px;
+}
+
+.NavButton a {
+    text-decoration: none;
+    color: grey;
+}
+
+.NavButton a:visited {
+    color: inherit;
 }
 
 #div_code_view {
     flex-grow: 1;
+    margin-top: 8px;
+    margin-bottom: 10px;
 }
 
 .CodeView {
@@ -52,7 +66,8 @@ img {
     flex-grow: 1;
     justify-content: center;
     height: 300px;
-    border: 2px solid #CCCCCC;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
     margin: 4px;
 }
 
@@ -63,19 +78,20 @@ img {
     justify-content: center;
     font-size: 3em;
     height: 100px;
+    border-bottom: 4px solid lightgray;
 }
 
 #the_footer {
     background: #B6B6B6;
     color: #FFFFFF;
     padding: 20px;
+    margin-top: 24px;
 }
 
 #div_left_panel {
     text-align: center;
     justify-content: flex-start;
     width: 280px;
-    border-right: 2px solid #CCCCCC;
 }
 
 #div_left_panel > p {
@@ -85,6 +101,7 @@ img {
 #div_not_panel {
     flex-grow: 1;
     justify-content: flex-start;
+    margin-right: 30px;
 }
 
 #nav_big_buttons ul {
