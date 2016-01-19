@@ -46,7 +46,7 @@ img {
     margin-right: 50px;
 }
 
-#div_left_panel:nth-child(n) {
+#div_left_panel > * {
     position: relative;
     top: -96px;
 }
@@ -90,6 +90,10 @@ img {
     box-shadow: 0 0 4px #CCCCCC;
 }
 
+.NavButton div {
+    justify-content: space-around;
+}
+
 .NavButton:hover {
     background: #F5F5F5;
 }
@@ -100,6 +104,17 @@ img {
 
 .NavButton a:visited {
     color: inherit;
+}
+
+.NavButton img {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.NavButton#more img {
+    height: 70px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 #div_code_view {
