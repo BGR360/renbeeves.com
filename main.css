@@ -69,11 +69,16 @@ img {
     justify-content: flex-start;
 }
 
+#nav_big_buttons {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
 .NavButton {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    flex-grow: 1;
-    height: 250px;
+    height: 220px;
     text-align: center;
     text-decoration: none;
     color: #777777;
@@ -82,7 +87,6 @@ img {
     border: 1px solid #CCCCCC;
     border-radius: 8px;
     margin: 6px;
-    margin-top: 24px;
     box-shadow: 0 0 4px #CCCCCC;
 }
 
@@ -106,9 +110,9 @@ img {
 
 .CodeView {
     display: flex;
+    flex: 1;
     flex-direction: column;
     text-align: center;
-    flex-grow: 1;
     justify-content: center;
     border: 1px solid #CCCCCC;
     border-radius: 8px;
