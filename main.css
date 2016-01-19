@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -34,6 +34,7 @@ img {
     flex-grow: 1;
     height: 250px;
     text-align: center;
+    font-size: 2em;
     justify-content: center;
     border: 2px solid #CCCCCC;
     margin: 4px;
@@ -66,7 +67,6 @@ img {
 #the_footer {
     background: #B6B6B6;
     color: #FFFFFF;
-    margin: 8px;
     padding: 20px;
 }
 
