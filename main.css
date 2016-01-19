@@ -4,6 +4,16 @@
     font-family:"Source Sans Pro",Helvetica,Arial,sans-serif;
 }
 
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 body {
     width: 100%;
@@ -14,31 +24,42 @@ img {
     margin-right: auto;
 }
 
-#div_profile_pic {
-    width: 230px;
-    height: 230px;
+#the_header {
+    background: #2196F3;
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+    font-size: 3em;
+    height: 130px;
+    box-shadow: 0 0 10px #888888;
+}
+
+#div_left_panel {
+    text-align: center;
+    justify-content: flex-start;
+    width: 320px;
+}
+
+#div_left_panel:nth-child(n) {
+    position: relative;
+    top: -96px;
+}
+
+#div_left_panel p {
+    padding: 0 25px 10px 25px;
 }
 
 #img_profile_pic {
-    /* margin: 30px;
-    margin-left: 36px;
-    margin-top: 24px; */
-    position: relative;
-    top: -72px;
-    width: 210px;
+    width: 200px;
+    margin-bottom: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 15px #888888;
+    box-shadow: 0 0 15px #777777;
 }
 
-.horizontal {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#div_not_panel {
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-right: 30px;
 }
 
 .NavButton {
@@ -82,39 +103,9 @@ img {
     margin: 4px;
 }
 
-#the_header {
-    background: #2196F3;
-    color: #FFFFFF;
-    text-align: center;
-    justify-content: center;
-    font-size: 3em;
-    height: 100px;
-    box-shadow: 0 0 10px #888888;
-}
-
 #the_footer {
     background: #B6B6B6;
     color: #FFFFFF;
     padding: 20px;
     margin-top: 24px;
-}
-
-#div_left_panel {
-    text-align: center;
-    justify-content: flex-start;
-    width: 320px;
-}
-
-#div_left_panel > p {
-    padding: 25px;
-}
-
-#div_not_panel {
-    flex-grow: 1;
-    justify-content: flex-start;
-    margin-right: 30px;
-}
-
-#nav_big_buttons ul {
-    list-style: none;
 }
