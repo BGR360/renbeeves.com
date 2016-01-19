@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family:"Source Sans Pro",Helvetica,Arial,sans-serif;
+    color: #444444
 }
 
 .horizontal {
@@ -34,10 +35,15 @@ img {
     box-shadow: 0 0 10px #888888;
 }
 
+#div_main_content {
+    padding: 0 50px 0 50px;
+}
+
 #div_left_panel {
     text-align: center;
     justify-content: flex-start;
-    width: 320px;
+    max-width: 260px;
+    margin-right: 50px;
 }
 
 #div_left_panel:nth-child(n) {
@@ -46,7 +52,9 @@ img {
 }
 
 #div_left_panel p {
-    padding: 0 25px 10px 25px;
+    padding: 0 1px 3px 1px;
+    line-height: 140%;
+    margin-bottom: 10px;
 }
 
 #img_profile_pic {
@@ -59,7 +67,6 @@ img {
 #div_not_panel {
     flex-grow: 1;
     justify-content: flex-start;
-    margin-right: 30px;
 }
 
 .NavButton {
@@ -68,17 +75,15 @@ img {
     flex-grow: 1;
     height: 250px;
     text-align: center;
+    text-decoration: none;
+    color: #777777;
     font-size: 2em;
     justify-content: center;
     border: 1px solid #CCCCCC;
     border-radius: 8px;
-    margin: 4px;
+    margin: 6px;
     margin-top: 24px;
-}
-
-.NavButton a {
-    text-decoration: none;
-    color: grey;
+    box-shadow: 0 0 4px #CCCCCC;
 }
 
 .NavButton a:visited {
@@ -100,12 +105,13 @@ img {
     height: 300px;
     border: 1px solid #CCCCCC;
     border-radius: 8px;
-    margin: 4px;
+    margin: 6px;
+    box-shadow: 0 0 4px #CCCCCC;
 }
 
 #the_footer {
     background: #B6B6B6;
     color: #FFFFFF;
-    padding: 20px;
+    padding: 10px;
     margin-top: 24px;
 }
