@@ -37,12 +37,14 @@ img {
 
 #div_main_content {
     padding: 0 50px 0 50px;
+    justify-content: flex-start;
 }
 
 #div_left_panel {
     text-align: center;
     justify-content: flex-start;
     max-width: 260px;
+    min-width: 260px;
     margin-right: 50px;
 }
 
@@ -123,8 +125,7 @@ img {
 
 #div_code_view {
     flex-grow: 1;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    margin: 8px 6px 10px 6px;
 }
 
 .CodeView {
