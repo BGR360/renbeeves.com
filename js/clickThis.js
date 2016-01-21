@@ -3,6 +3,7 @@
  */
 
 var responses = [
+    "Click this?",
     "I guess not.",
     "You clicked it again.",
     "Yo, give it up",
@@ -28,7 +29,7 @@ var responses = [
     "kbye"
 ];
 
-var currentResponse = 0;
+var currentResponse = 1;
 
 function onClickThis() {
     var button = document.getElementById("button_click_this");
