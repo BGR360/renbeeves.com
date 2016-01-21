@@ -24,7 +24,7 @@ repo.show(function(err, res){
 var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
 
 function loadLastUpdatedFile() {
-    reader.open('get', 'test.txt', true);
+    reader.open('get', 'last_updated', true);
     reader.onreadystatechange = displayLastUpdated;
     reader.send(null);
 }
@@ -36,4 +36,6 @@ function displayLastUpdated() {
         lastUpdatedSpan.innerHTML = reader.responseText;
     }
 }
+
+loadLastUpdatedFile();
 
