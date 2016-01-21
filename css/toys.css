@@ -78,7 +78,7 @@ img {
     text-decoration:none;
     text-shadow:0 1px 0 #5b8a3c;
 
-    width: 120px;
+   /* width: 120px;*/
     margin-top: 30px;
 }
 .myButton:hover {
