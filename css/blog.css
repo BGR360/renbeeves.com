@@ -45,9 +45,9 @@ img {
     margin: 10px 0 10px 0;
     padding: 0 30px 0 30px;
     /*max-width: 650px;*/
-    width: 65%;
+    width: 75%;
     line-height: 150%;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 #img_blog {
@@ -57,24 +57,29 @@ img {
 }
 
 #article_robot_blog {
-    margin: 0 15px 0 15px;
+    margin: 40px 15px 0 15px;
     padding: 24px;
     border: 1px solid #CCCCCC;
     border-radius: 8px;
     width: 80%;
-    font-size: 1.2em;
-    line-height: 150%;
+    font-size: 1.3em;
+    line-height: 175%;
+    align-items: center;
 }
 
 #article_robot_blog > h1 {
-    margin: 4px;
+    font-size: 2em;
+    margin: 12px;
+    margin-bottom: 20px;
 }
 
-#article_robot_blog > h2 {
+#article_robot_blog > h3 {
+    font-size: 1.5em;
     margin: 4px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
-#p_robot_blog {
-
+.RobotParagraph {
+    width: 85%;
+    margin-bottom: 24px;
 }
