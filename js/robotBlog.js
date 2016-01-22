@@ -100,7 +100,7 @@ function capitalize(str) {
 }
 
 function isVowel(character) {
-    return vowels.indexOf(character) != -1;
+    return vowels.indexOf(character.toLowerCase()) != -1;
 }
 
 function getNoun() {
