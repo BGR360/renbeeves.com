@@ -27,12 +27,37 @@ img {
 
 #the_header {
     background: #2196F3;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+    padding: 15px 50px 15px 50px;
+    box-shadow: 0 0 10px #888888;
+}
+
+#the_header p {
+    font-size: 3em;
     color: #FFFFFF;
     text-align: center;
-    justify-content: center;
-    font-size: 3em;
-    height: 130px;
-    box-shadow: 0 0 10px #888888;
+    position: relative;
+    left: 260px;
+}
+
+#div_header_left_filler {
+    width: 260px;
+    flex-shrink: 1;
+}
+
+#div_external_links {
+    justify-content: space-around;
+}
+
+#link_github > img {
+    width: 50px;
+    padding-right: 10px;
+}
+#link_linkedin > img {
+    width: 50px;
+    padding-left: 10px;
 }
 
 #div_main_content {

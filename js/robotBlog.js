@@ -31,7 +31,7 @@ var nouns = [
     "BATMAN", "person", "human", "animal", "song", "guitar", "piano", "music",
     "third party", "president", "boss", "employee", "entity", "thought",
     "female", "male", "letter", "alphabet", "bowl", "soup", "pizza", "ice cream",
-    "weekday", ""
+    "weekday"
 ];
 
 var transitiveVerbs = [
