@@ -49,15 +49,14 @@ img {
 
 #div_external_links {
     justify-content: space-around;
+    margin-top: 24px;
 }
 
 #link_github > img {
     width: 50px;
-    padding-right: 10px;
 }
 #link_linkedin > img {
     width: 50px;
-    padding-left: 10px;
 }
 
 #div_main_content {
