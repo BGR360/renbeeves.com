@@ -9,10 +9,10 @@
  * 6. Random sentence.
  */
 
-var NUM_SENTENCES_PER_PARAGRAPH = 12;
+var NUM_SENTENCES_PER_PARAGRAPH = 15;
 
 var nouns = [
-    "dog", "cat", "mouse", "herring", "house", "bug", "chair", "butthole", "couch",
+    "dog", "cat", "mouse", "herring", "house", "bug", "chair", "couch",
     "attic", "goat", "fox", "cup", "teabag", "error", "terminal", "keyboard",
     "television", "number", "Ford Taurus", "droid", "radio", "gate", "bathtub",
     "boy", "girl", "man", "woman", "programmer", "program", "intangible abstract idea",
@@ -79,6 +79,10 @@ var fullSentences = [
 
 function randomInt(max) {
     return Math.floor(Math.random() * max);
+}
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function getNoun() {
@@ -152,8 +156,7 @@ var sentenceFunctions = [
     {
         write: function() {
             var theThing = getNoun();
-            return theThing.charAt(0).toUpperCase() + theThing.slice(1) +
-                " is love, " + theThing + " is life.";
+            return capitalize(theThing) + " is love, " + theThing + " is life.";
         },
         weight: 1
     },
@@ -161,6 +164,46 @@ var sentenceFunctions = [
         write: function() {
             return "Sometimes I'll just be walking around " + getPlace() +
                     " and I'll be like, '" + getExplitive() + "'";
+        },
+        weight: 3
+    },
+    {
+        write: function() {
+            return "I would like to buy a " + getNoun() + ".";
+        },
+        weight: 4
+    },
+    {
+        write: function() {
+            return capitalize(getNoun() + " " + getPreposition() + " a " + getNoun() + ".");
+        },
+        weight: 3
+    },
+    {
+        write: function() {
+            var sentence = "One time I said, '" + getRandomSentence() + "'";
+            var choices = [
+                function() {
+                    return "Everybody laughed.";
+                },
+                function() {
+                    return "I said it because a " + getNoun() + " " +
+                            getTransitiveVerb() + " my " + getNoun() + ".";
+                },
+                function() {
+                    return "It was funny because a " + getNoun() + " " +
+                        getTransitiveVerb() + " my " + getNoun() + ".";
+                },
+                function() {
+                    return "Everybody was all like '" + getExplitive() + "'";
+                },
+                function() {
+                    return "And then, Stacey was all like, '" +
+                        getRandomSentence() + "'";
+                }
+            ];
+            var choice = randomInt(choices.length);
+            return sentence + " " + choices[choice]();
         },
         weight: 3
     }
@@ -177,11 +220,14 @@ function prepareSentenceFunctions() {
     return newSentenceFunctions;
 }
 
+function getRandomSentence() {
+    return sentenceFunctions[randomInt(sentenceFunctions.length)]();
+}
+
 function getRobotBlog() {
     var blog = "";
     for (var i = 0; i < NUM_SENTENCES_PER_PARAGRAPH; i++) {
-        var sentenceFunction = sentenceFunctions[randomInt(sentenceFunctions.length)];
-        blog += sentenceFunction() + " ";
+        blog += getRandomSentence() + " ";
     }
     return blog;
 }
