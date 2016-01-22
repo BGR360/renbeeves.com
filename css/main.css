@@ -39,7 +39,7 @@ img {
     color: #FFFFFF;
     text-align: center;
     position: relative;
-    left: 260px;
+    left: 280px;
 }
 
 #div_header_left_filler {
@@ -85,7 +85,7 @@ img {
 
 #img_profile_pic {
     width: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border-radius: 8px;
     box-shadow: 0 0 15px #777777;
 }
