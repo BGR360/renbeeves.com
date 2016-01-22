@@ -39,14 +39,15 @@ img {
     margin: 30px 80px 30px 80px;
     text-align: center;
     align-items: center;
+    font-size: 1.3em;
 }
 
 #div_main_content p {
-    margin: 5px 0 5px 0;
+    margin: 10px 0 10px 0;
 }
 
 #img_rocket {
-    height: 200px;
+    height: 180px;
     margin-top: 20px;
     margin-bottom: 30px;
 }

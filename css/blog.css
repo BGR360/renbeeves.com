@@ -37,6 +37,7 @@ img {
 
 #div_main_content {
     margin: 30px 30px 30px 30px;
+    justify-content: center;
     text-align: center;
     align-items: center;
 }
