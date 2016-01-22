@@ -11,6 +11,9 @@
 
 var NUM_SENTENCES_PER_PARAGRAPH = 15;
 
+var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+
 var nouns = [
     "dog", "cat", "mouse", "herring", "house", "bug", "chair", "couch",
     "attic", "goat", "fox", "cup", "teabag", "error", "terminal", "keyboard",
@@ -24,21 +27,30 @@ var nouns = [
     "bed", "lamp", "volleyball", "masseuse", "european", "American",
     "house", "yard", "drawer", "head", "cupboard", "boot", "state", "country",
     "circuitry", "memory", "USB port", "CPU", "Recycling Bin", "college",
-    "bank account", "brogram", "brotein", "dank meme", "fish", "Starbucks"
+    "bank account", "brogram", "brotein", "dank meme", "fish", "Starbucks",
+    "BATMAN", "person", "human", "animal", "song", "guitar", "piano", "music",
+    "third party", "president", "boss", "employee", "entity", "thought",
+    "female", "male", "letter", "alphabet", "bowl", "soup", "pizza", "ice cream",
+    "weekday", ""
 ];
 
 var transitiveVerbs = [
     "helps", "hugs", "likes", "rubs", "eats", "scratches", "beats up", "sees",
     "appraises", "electrocutes", "bombards", "interrogates", "drives", "buys",
     "slaps", "emulsifies", "emulates", "kills", "is", "loves", "brograms",
-    "drinks", "swindles", "detoxifies", "melts"
+    "drinks", "swindles", "detoxifies", "melts", "sees", "annoys", "sweeps",
+    "unleashes", "sanctifies", "jiggles", "shakes", "steals", "shoots",
+    "keeps", "finds", ""
 ];
 
 var intransitiveVerbs = [
     "speak", "play chess", "sing", "bleed", "laugh", "play", "run",
     "fish", "poop", "netflix and chill", "be", "grow", "fly", "swim",
     "breakdance", "juggle", "type", "brogram", "lift", "vape", "make love",
-    "hop", "jam", "jive", "DDOS", "dank meme"
+    "hop", "jam", "jive", "DDOS", "dank meme", "change", "fly", "make it rain",
+    "rap", "dance", "breathe", "smell", "text", "crash", "ponder", "think",
+    "dream", "love", "be free", "sing the Star Spangled Banner", "laugh", "run",
+    "speak", "swim", ""
 ];
 
 var prepositions = [
@@ -63,7 +75,8 @@ var explitives = [
     "Wow!", "Amaze!", "Such wonder!", "Golly!", "#$@?&!!", "Yaaaaaaaaaaaasssss.",
     "Oh. My. Gawd.", "Like, for real.", "Inconceivable!", "Your mom!", "Awesome!",
     "Weird!", "Super!", "Wow!", "How about that?", "Dude!", "B R U H.", "That's so college!",
-    "Savage!"
+    "Savage!", "Yo.", "Holy cow.", "Jeepers!", "For real?", "Man alive!", "Bloody hell!",
+    "Yoooooo!", "ayy lmao."
 ];
 
 var fullSentences = [
@@ -74,7 +87,8 @@ var fullSentences = [
     "How about no?", "Can you not, please?", "I would like to buy a hamburger.",
     "This thing smells funny.", "The pizza is aggressive.", "You're a wizard, Harry.",
     "What a time to be alive.", "My aunt says that a lot.", "That's what my dad tells me.",
-    "What is love?", "I just can't even.", "I'm literally dying.", "MOM, GET THE CAMERA!!"
+    "What is love?", "I just can't even.", "I'm literally dying.", "MOM, GET THE CAMERA!!",
+    "And his name is John Cena!!"
 ];
 
 function randomInt(max) {
@@ -85,8 +99,22 @@ function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+function isVowel(character) {
+    return vowels.indexOf(character) != -1;
+}
+
 function getNoun() {
     return nouns[randomInt(nouns.length)];
+}
+
+function get_a_noun() {
+    var noun = getNoun();
+    if (isVowel(noun.charAt(0))) {
+        return "an " + noun;
+    }
+    else {
+        return "a " + noun;
+    }
 }
 
 function getTransitiveVerb() {
@@ -124,13 +152,13 @@ var sentenceFunctions = [
     {
         write: function() {
             return "Sometimes I like to " + getIntransitiveVerb() +
-                " " + getPreposition() + " a " + getNoun() + ".";
+                " " + getPreposition() + " " + get_a_noun() + ".";
         },
         weight: 4
     },
     {
         write: function() {
-            return "There is a " + getNoun() + " in my " + getNoun() + ".";
+            return "There is " + get_a_noun() + " in my " + getNoun() + ".";
         },
         weight: 5
     },
@@ -169,13 +197,13 @@ var sentenceFunctions = [
     },
     {
         write: function() {
-            return "I would like to buy a " + getNoun() + ".";
+            return "I would like to buy " + get_a_noun() + ".";
         },
         weight: 4
     },
     {
         write: function() {
-            return capitalize(getNoun() + " " + getPreposition() + " a " + getNoun() + ".");
+            return capitalize(getNoun() + " " + getPreposition() + " " + get_a_noun() + ".");
         },
         weight: 3
     },
@@ -187,11 +215,11 @@ var sentenceFunctions = [
                     return "Everybody laughed.";
                 },
                 function() {
-                    return "I said it because a " + getNoun() + " " +
+                    return "I said it because " + get_a_noun() + " " +
                             getTransitiveVerb() + " my " + getNoun() + ".";
                 },
                 function() {
-                    return "It was funny because a " + getNoun() + " " +
+                    return "It was funny because " + get_a_noun() + " " +
                         getTransitiveVerb() + " my " + getNoun() + ".";
                 },
                 function() {
@@ -206,6 +234,33 @@ var sentenceFunctions = [
             return sentence + " " + choices[choice]();
         },
         weight: 3
+    },
+    {
+        write: function() {
+            return "I found " + get_a_noun() + " in " + getPlace() + ".";
+        },
+        weight: 3
+    },
+    {
+        write: function() {
+            return "I found " + get_a_noun() + " " + getPreposition() +
+                    " " + get_a_noun() + ".";
+        },
+        weight: 3
+    },
+    {
+        write: function() {
+            return "I know " + get_a_noun() + " that " +
+                    getTransitiveVerb() + " " + get_a_noun() + ".";
+        },
+        weight: 2
+    },
+    {
+        write: function() {
+            return "Have you met the " + getNoun() + " that " +
+                    getTransitiveVerb() + "?";
+        },
+        weight: 2
     }
 ];
 
