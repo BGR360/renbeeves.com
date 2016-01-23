@@ -7,10 +7,6 @@
  *
 // Get the last updated date from the git repository
 var updatedDate = new Date();
-var github = new Github({
-    token: "",
-    auth: "oauth"
-});
 var repo = github.getRepo("BGR360", "BGR360.github.io");
 var lastUpdatedDateAsStr = "";
 repo.show(function(err, res){
@@ -18,16 +14,6 @@ repo.show(function(err, res){
     updatedDate = new Date(lastUpdatedDateAsStr);
 });
  */
-
-// Source: StackExchange, User: bcmoney
-
-var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
-
-function loadLastUpdatedFile() {
-    reader.open('get', 'last_updated', true);
-    reader.onreadystatechange = displayLastUpdated;
-    reader.send(null);
-}
 
 function displayLastUpdated() {
     if (reader.readyState == 4) {
@@ -37,5 +23,5 @@ function displayLastUpdated() {
     }
 }
 
-loadLastUpdatedFile();
+loadFileViaHttp("last_updated", displayLastUpdated);
 

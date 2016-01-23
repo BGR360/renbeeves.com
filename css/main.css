@@ -100,7 +100,6 @@ img {
 }
 
 #nav_big_buttons {
-    margin-bottom: 30px;
     margin-top: 30px;
 }
 
@@ -150,6 +149,16 @@ img {
 #div_code_view {
     flex-grow: 1;
     margin: 8px 6px 10px 6px;
+    text-align: center;
+    justify-content: center;
+}
+
+#div_code_view > p {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #888888;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .CodeView {

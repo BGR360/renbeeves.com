@@ -10,10 +10,13 @@
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
 
-    <!-- include for the GitHub API -->
+    <!-- includes for the GitHub API -->
+    <script type="text/javascript" src="js/getFileHttp.js"></script>
     <script type="text/javascript" src="js/github.js"></script>
 </head>
 <body>
+<script type="text/javascript" src="js/githubApiAccess.js"></script>
+
 <div class="vertical" id="div_full_site">
     <header class="horizontal" id="the_header">
         <p>Ben Reeves</p>
@@ -75,10 +78,10 @@
                     </div>
                 </a>
             </nav>
-            <div class="horizontal" id="div_code_view">
-                <code data-gist-id="b9b3bdaa01f3dab012f9"
-                      data-gist-show-spinner="true">
-                </code>
+            <div class="vertical" id="div_code_view">
+                <p id="gist_description">Description of gist</p>
+                <!-- Script to pick a random gist -->
+                <script type="text/javascript" src="js/pickRandomGist.js"></script>
             </div>
         </div>
     </div>
