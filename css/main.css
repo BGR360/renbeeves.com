@@ -78,8 +78,6 @@ img {
 }
 
 #div_left_panel p {
-    padding: 0 1px 3px 1px;
-    line-height: 140%;
     margin-bottom: 10px;
 }
 
@@ -91,7 +89,9 @@ img {
 }
 
 #div_left_panel_text {
-    margin-top: 30px;
+    line-height: 140%;
+    font-size: 1.1em;
+    margin-top: 15px;
 }
 
 #div_not_panel {
