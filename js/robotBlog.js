@@ -289,8 +289,12 @@ function getRobotBlog() {
 
 sentenceFunctions = prepareSentenceFunctions();
 
-var robotParagraphs = document.getElementsByClassName("RobotParagraph");
-for (var i = 0; i < robotParagraphs.length; i++) {
-    var paragraph = robotParagraphs[i];
-    paragraph.innerHTML = getRobotBlog();
+function generateNewRobotBlog() {
+    var robotParagraphs = document.getElementsByClassName("RobotParagraph");
+    for (var i = 0; i < robotParagraphs.length; i++) {
+        var paragraph = robotParagraphs[i];
+        paragraph.innerHTML = getRobotBlog();
+    }
 }
+
+generateNewRobotBlog();
