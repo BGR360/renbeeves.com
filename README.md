@@ -1,3 +1,12 @@
 # [BGR360.github.io](https://bgr360.github.io)
 My github.io page
-[![](http://i.imgur.com/dSmabHn.png)](https://bgr360.github.io)
+
+![](images/screenshots/home.png)
+
+![](images/screenshots/blog.png)
+
+![](images/screenshots/code.png)
+
+![](images/screenshots/toys.png)
+
+![](images/screenshots/more.png)
