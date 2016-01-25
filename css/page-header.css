@@ -1,0 +1,18 @@
+.page-header {
+    display: flex;
+    flex-direction: row;
+    background: #2196F3;
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    height: 100px;
+    box-shadow: 0 0 10px #888888;
+}
+
+.page-header p {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 3em;
+}

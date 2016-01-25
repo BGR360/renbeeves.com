@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Ben Reeves | Code</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/page-header.css"/>
+    <link rel="stylesheet" href="css/home-button.css"/>
+    <link rel="stylesheet" href="css/page-main-content.css"/>
+    <link rel="stylesheet" href="css/page-footer.css"/>
     <link rel="stylesheet" href="css/code.css"/>
 </head>
 <body>
     <div id="div_whole_site">
-        <header class="vertical" id="the_header">
+        <header class="page-header">
             Coding Projects
         </header>
-        <div class="vertical" id="div_main_content">
+        <div class="page-main-content">
             <div class="horizontal" id="div_top_content">
                 <div class="vertical" id="div_user_card">
                     <div class="github-card" data-github="bgr360" data-width="400"
@@ -18,24 +23,14 @@
                     <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
                 </div>
 
-                <!--<div class="vertical" id="div_top_right_content">-->
-                    <!--<div id="div_xkcd" class="vertical">
-                        <a id="link_xkcd" href="http://xkcd.com/221/">
-                            <img src="http://imgs.xkcd.com/comics/random_number.png"/>
-                        </a>
-                    </div>-->
-
-                    <div id="div_pie_chart">
-                        <img id="img_pie_chart"
-                             src="https://raw.githubusercontent.com/BGR360/RepoLanguageAnalyzer/master/charts/bgr360.png"/>
-                    </div>
-                <!--</div>-->
+                <div id="div_pie_chart">
+                    <img id="img_pie_chart"
+                         src="https://raw.githubusercontent.com/BGR360/RepoLanguageAnalyzer/master/charts/bgr360.png"/>
+                </div>
             </div>
 
-            <div id="div_blurb">
-                <h1>
-                    My Coding Projects
-                </h1>
+            <div id="div_blurb" class="vertical">
+                <h1>My Coding Projects</h1>
                 <p>
                     In my spare time, there are few things that I enjoy doing more than programming.
                     If I'm not working on some sort of coding project, I tend to go kinda crazy.
@@ -72,7 +67,7 @@
                 </div>
             </div>
         </div>
-        <footer id="the_footer">
+        <footer class="page-footer">
             <div class="horizontal">
                 <p>
                     Copyright 2015 Benjamin Reeves

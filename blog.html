@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Ben Reeves | Blog</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/page-header.css"/>
+    <link rel="stylesheet" href="css/home-button.css"/>
+    <link rel="stylesheet" href="css/page-main-content.css"/>
+    <link rel="stylesheet" href="css/page-footer.css"/>
     <link rel="stylesheet" href="css/blog.css"/>
 </head>
 <body>
     <div id="div_whole_site">
-        <header class="vertical" id="the_header">
+        <header class="page-header">
+            <div class="home-button">
+                <a href="index.html">
+                    <img src="images/home.png"/>
+                </a>
+            </div>
             Blog
         </header>
-        <div class="vertical" id="div_main_content">
+        <div class="page-main-content">
             <img id="img_blog" src="images/blog.png"/>
             <p>
                 I haven't written any blog posts yet. Maybe it's an issue of creativity.
@@ -29,7 +39,7 @@
                 <script type="text/javascript" src="js/robotBlog.js"></script>
             </article>
         </div>
-        <footer id="the_footer">
+        <footer class="page-footer">
             <div class="horizontal">
                 <p>
                     Copyright 2015 Benjamin Reeves

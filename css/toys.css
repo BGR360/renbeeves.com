@@ -1,40 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family:"Source Sans Pro",Helvetica,Arial,sans-serif;
-    color: #444444
-}
-
-.horizontal {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-body {
-    width: 100%;
-}
-
-img {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#the_header {
-    background: #2196F3;
-    color: #FFFFFF;
-    text-align: center;
-    justify-content: center;
-    font-size: 3em;
-    height: 100px;
-    box-shadow: 0 0 10px #888888;
-}
-
 #div_main_content {
     margin: 30px 80px 30px 80px;
     text-align: center;
@@ -99,19 +62,4 @@ img {
 
 .myButton:focus {
     outline: 0;
-}
-
-#the_footer {
-    background: #B6B6B6;
-    padding: 10px 30px 10px 30px;
-    margin-top: 24px;
-}
-
-#the_footer > div {
-    justify-content: space-around;
-}
-
-#the_footer p, #the_footer span {
-    color: #FFFFFF;
-    font-size: 0.8em;
 }
