@@ -4,11 +4,11 @@
     margin-top: 24px;
 }
 
-.page-footer > div {
-    justify-content: space-around;
+.page-footer * {
+    color: #FFFFFF;
+    font-size: 0.9em;
 }
 
-.page-footer p, .page-footer span {
-    color: #FFFFFF;
-    font-size: 0.8em;
+.page-footer > div {
+    justify-content: space-around;
 }
