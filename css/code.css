@@ -45,6 +45,8 @@ img {
 
 #div_main_content {
     margin: 10px 50px 30px 50px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -84,9 +86,16 @@ img {
     max-height: 275px;
 }
 
-#p_blurb {
+#div_blurb {
     margin: 50px 40px 75px 40px;
     font-size: 1.2em;
+    line-height: 175%;
+    max-width: 700px;
+}
+
+#div_blurb h1 {
+    line-height: 175%;
+    margin-bottom: 40px;
 }
 
 .project-holder {
