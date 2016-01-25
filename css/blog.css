@@ -36,7 +36,7 @@ img {
 }
 
 #div_main_content {
-    margin: 30px 30px 30px 30px;
+    margin: 30px 30px 80px 30px;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -45,7 +45,6 @@ img {
 #div_main_content > p {
     margin: 10px 0 10px 0;
     padding: 0 30px 0 30px;
-    /*max-width: 650px;*/
     width: 75%;
     line-height: 150%;
     font-size: 1.3em;
@@ -116,4 +115,19 @@ img {
 .RobotParagraph {
     width: 85%;
     margin-bottom: 24px;
+}
+
+#the_footer {
+    background: #B6B6B6;
+    padding: 10px 30px 10px 30px;
+    margin-top: 24px;
+}
+
+#the_footer > div {
+    justify-content: space-around;
+}
+
+#the_footer p, #the_footer span {
+    color: #FFFFFF;
+    font-size: 0.8em;
 }

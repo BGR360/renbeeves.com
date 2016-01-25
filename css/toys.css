@@ -100,3 +100,18 @@ img {
 .myButton:focus {
     outline: 0;
 }
+
+#the_footer {
+    background: #B6B6B6;
+    padding: 10px 30px 10px 30px;
+    margin-top: 24px;
+}
+
+#the_footer > div {
+    justify-content: space-around;
+}
+
+#the_footer p, #the_footer span {
+    color: #FFFFFF;
+    font-size: 0.8em;
+}
