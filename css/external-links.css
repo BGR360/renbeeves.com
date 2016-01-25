@@ -1,0 +1,13 @@
+.external-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.external-links img {
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
