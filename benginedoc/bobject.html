@@ -65,7 +65,7 @@
 <div class="context">
 <h1 class="title">BObject Class</h1>
 <!-- $$$BObject-brief -->
-<p>The <a href="bobject.html">BObject</a> class is the base class for all Game Objects <a href="#details">More...</a></p>
+<p>The <a href="bobject.html">BObject</a> class is the base class for all Game Objects. <a href="#details">More...</a></p>
 <!-- @@@BObject -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;BObject&gt;</span>
@@ -85,7 +85,7 @@
 <!-- $$$BObject-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>The <a href="bobject.html">BObject</a> class is the base class for all Game Objects</p>
+<p>The <a href="bobject.html">BObject</a> class is the base class for all Game Objects.</p>
 <p>A <a href="bobject.html">BObject</a> carries a list of <a href="bcomponent.html">BComponent</a> objects and is the base class for all game objects.</p>
 </div>
 <p><b>See also </b><a href="bcomponent.html">BComponent</a>.</p>
@@ -94,23 +94,25 @@
 <h2>Member Function Documentation</h2>
 <!-- $$$BObject[overload1]$$$BObject -->
 <h3 class="fn" id="BObject"><a name="BObject"></a>BObject::<span class="name">BObject</span>()</h3>
-<p>Constructs a new <a href="bobject.html">BObject</a></p>
+<p>Constructs a new <a href="bobject.html">BObject</a>.</p>
 <!-- @@@BObject -->
 <!-- $$$~BObject[overload1]$$$~BObject -->
 <h3 class="fn" id="dtor.BObject"><a name="dtor.BObject"></a><code>[virtual] </code>BObject::<span class="name">~BObject</span>()</h3>
-<p>Destroys a <a href="bobject.html">BObject</a></p>
+<p>Destroys a <a href="bobject.html">BObject</a>.</p>
 <!-- @@@~BObject -->
 <!-- $$$addComponent[overload1]$$$addComponentBComponent* -->
 <h3 class="fn" id="addComponent"><a name="addComponent"></a><span class="type">void</span> BObject::<span class="name">addComponent</span>(<span class="type"><a href="bcomponent.html">BComponent</a></span> *<i> component</i>)</h3>
-<p>Adds a <a href="bcomponent.html">BComponent</a> to the object Adds <i>component</i> to this object's list of components A <a href="bobject.html">BObject</a> has ownership of its BObjects and is responsible for deleting them.</p>
+<p>Adds <i>component</i> to this object's list of components.</p>
+<p>A <a href="bobject.html">BObject</a> has ownership of its BObjects and is responsible for deleting them.</p>
 <!-- @@@addComponent -->
 <!-- $$$getComponents[overload1]$$$getComponents -->
 <h3 class="fn" id="getComponents"><a name="getComponents"></a><span class="type">QVector</span>&lt;<span class="type"><a href="bcomponent.html">BComponent</a></span> *&gt; BObject::<span class="name">getComponents</span>() const</h3>
-<p>BObject::getComponents Returns the game components that this <a href="bobject.html">BObject</a> has</p>
+<p>Returns the game components that this <a href="bobject.html">BObject</a> has.</p>
 <!-- @@@getComponents -->
 <!-- $$$removeComponent[overload1]$$$removeComponentBComponent* -->
 <h3 class="fn" id="removeComponent"><a name="removeComponent"></a><span class="type">bool</span> BObject::<span class="name">removeComponent</span>(<span class="type"><a href="bcomponent.html">BComponent</a></span> *<i> component</i>)</h3>
-<p>Removes a <a href="bcomponent.html">BComponent</a> from the object Returns <code>true</code> if <i>component</i> was owned by this <a href="bobject.html">BObject</a> and removed; <code>false</code> otherwise</p>
+<p>Removes a <a href="bcomponent.html">BComponent</a> from the object.</p>
+<p>Returns <code>true</code> if <i>component</i> was owned by this <a href="bobject.html">BObject</a> and removed; <code>false</code> otherwise.</p>
 <!-- @@@removeComponent -->
 </div>
 </body>
