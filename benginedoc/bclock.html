@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- bclock.cpp -->
+  <title>BClock Class | Bengine </title>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
+   <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' />
+   <link rel='stylesheet' type='text/css' href='style/online.css'/>
+   <script src= https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js></script>
+   <script type='text/javascript' src='scripts/main.js'></script>
+</head>
+<body>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+                <div class="navbar-header clearfix">
+                    <a href="#" class="navbar-toggle">
+                        <figure>
+                            <span class="line"></span>
+                        </figure>
+                        <span>Menu</span>
+                    </a>
+                    <a href="http://qt.io/" class="navbar-oneQt retina" data-icon="">
+                    </a>
+                    <nav class="navbar-menu clearfix" role="navigation">
+                        <ul id="mainmenu" class="menu">
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="index.html">Documentation</a></li>
+<li id="menu-item-12207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12207"><a href="http://github.com/bgr360/Bengine/">Source Code</a></li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul class="sub-navigation">
+        <li><a href="http://wiki.qt.io/">Qt Wiki</a></li>
+        <li><a href="http://doc.qt.io/" class="active">Qt Documentation</a></li>
+        <li><a href="http://bgr360.github.io/">Ben Reeves' Website</a></li>
+    </ul>
+    <div id="main_title_bar">
+        <h1>Bengine Documentation</h1>
+    </div>
+    <ul>
+<li>BClock</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">BClock Class</h1>
+<!-- $$$BClock-brief -->
+<p>The <a href="bclock.html">BClock</a> class is a high-precision timer used to calculate delta times between frames. <a href="#details">More...</a></p>
+<!-- @@@BClock -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;BClock&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="bobject.html">BObject</a></td></tr></table></div><p><b>Note:</b> All functions in this class are reentrant.</p>
+<ul>
+<li><a href="bclock-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bclock.html#BClock">BClock</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="bclock.html#dtor.BClock">~BClock</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual float </td><td class="memItemRight bottomAlign"><b><a href="bclock.html#getDelta">getDelta</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual double </td><td class="memItemRight bottomAlign"><b><a href="bclock.html#getTime">getTime</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="bclock.html#newFrame">newFrame</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="bclock.html#reset">reset</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="bclock.html#start">start</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="bclock.html#stop">stop</a></b>()</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$BClock-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="bclock.html">BClock</a> class is a high-precision timer used to calculate delta times between frames.</p>
+<p>The <a href="bclock.html">BClock</a> class can be used to query the current time since the last update (see <a href="bclock.html#getDelta">getDelta</a>) or since the clock started (see <a href="bclock.html#getTime">getTime</a>).</p>
+</div>
+<!-- @@@BClock -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$BClock[overload1]$$$BClock -->
+<h3 class="fn" id="BClock"><a name="BClock"></a>BClock::<span class="name">BClock</span>()</h3>
+<p>Constructs a new <a href="bclock.html">BClock</a></p>
+<!-- @@@BClock -->
+<!-- $$$~BClock[overload1]$$$~BClock -->
+<h3 class="fn" id="dtor.BClock"><a name="dtor.BClock"></a><code>[virtual] </code>BClock::<span class="name">~BClock</span>()</h3>
+<p>Destroys a <a href="bclock.html">BClock</a></p>
+<!-- @@@~BClock -->
+<!-- $$$getDelta[overload1]$$$getDelta -->
+<h3 class="fn" id="getDelta"><a name="getDelta"></a><code>[virtual] </code><span class="type">float</span> BClock::<span class="name">getDelta</span>() const</h3>
+<p>Returns the time, in seconds, since <a href="bclock.html#newFrame">newFrame</a>() was last called.</p>
+<!-- @@@getDelta -->
+<!-- $$$getTime[overload1]$$$getTime -->
+<h3 class="fn" id="getTime"><a name="getTime"></a><code>[virtual] </code><span class="type">double</span> BClock::<span class="name">getTime</span>() const</h3>
+<p>Returns the time, in seconds, since <a href="bclock.html#start">start</a>() was last called.</p>
+<!-- @@@getTime -->
+<!-- $$$newFrame[overload1]$$$newFrame -->
+<h3 class="fn" id="newFrame"><a name="newFrame"></a><code>[virtual] </code><span class="type">void</span> BClock::<span class="name">newFrame</span>()</h3>
+<p>Begins a new frame for the clock.</p>
+<p>Calling this function will reset deltaTime to 0 seconds.</p>
+<!-- @@@newFrame -->
+<!-- $$$reset[overload1]$$$reset -->
+<h3 class="fn" id="reset"><a name="reset"></a><code>[virtual] </code><span class="type">void</span> BClock::<span class="name">reset</span>()</h3>
+<p>Resets the current time to 0 seconds.</p>
+<p>This function can be called while the clock is running or stopped and can be called multiple times.</p>
+<!-- @@@reset -->
+<!-- $$$start[overload1]$$$start -->
+<h3 class="fn" id="start"><a name="start"></a><code>[virtual] </code><span class="type">void</span> BClock::<span class="name">start</span>()</h3>
+<p>Starts the clock running.</p>
+<p>If <a href="bclock.html#stop">stop</a>() was previously called without a call to <a href="bclock.html#reset">reset</a>(), the clock will continue counting from where it left off.</p>
+<!-- @@@start -->
+<!-- $$$stop[overload1]$$$stop -->
+<h3 class="fn" id="stop"><a name="stop"></a><code>[virtual] </code><span class="type">void</span> BClock::<span class="name">stop</span>()</h3>
+<p>Stops the clock running.</p>
+<p>After stop() is called, if <a href="bclock.html#start">start</a>() is called before <a href="bclock.html#reset">reset</a>() is called, the clock will continue counting from where it left off.</p>
+<!-- @@@stop -->
+</div>
+</body>
+</html>
