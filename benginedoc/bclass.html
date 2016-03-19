@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- bclass.cpp -->
+  <title>BClass Class | Bengine </title>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
+   <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' />
+   <link rel='stylesheet' type='text/css' href='style/online.css'/>
+   <script src= https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js></script>
+   <script type='text/javascript' src='scripts/main.js'></script>
+</head>
+<body>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+                <div class="navbar-header clearfix">
+                    <a href="#" class="navbar-toggle">
+                        <figure>
+                            <span class="line"></span>
+                        </figure>
+                        <span>Menu</span>
+                    </a>
+                    <a href="http://qt.io/" class="navbar-oneQt retina" data-icon="">
+                    </a>
+                    <nav class="navbar-menu clearfix" role="navigation">
+                        <ul id="mainmenu" class="menu">
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="index.html">Documentation</a></li>
+<li id="menu-item-12207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12207"><a href="http://github.com/bgr360/Bengine/">Source Code</a></li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul class="sub-navigation">
+        <li><a href="http://wiki.qt.io/">Qt Wiki</a></li>
+        <li><a href="http://doc.qt.io/" class="active">Qt Documentation</a></li>
+        <li><a href="http://bgr360.github.io/">Ben Reeves' Website</a></li>
+    </ul>
+    <div id="main_title_bar">
+        <h1>Bengine Documentation</h1>
+    </div>
+    <ul>
+<li>BClass</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">BClass Class</h1>
+<!-- $$$BClass-brief -->
+<p>The <a href="bclass.html">BClass</a> class holds Runtime Type Information for a <a href="bobject.html">BObject</a>. <a href="#details">More...</a></p>
+<!-- @@@BClass -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;BClass&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="bclass-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#BClass">BClass</a></b>(const BObject &amp;<i> object</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#BClass-2">BClass</a></b>(const std::type_index &amp;<i> type</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#dtor.BClass">~BClass</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const char * </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#name">name</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#operator-not-eq">operator!=</a></b>(const BClass &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#operator-eq-eq">operator==</a></b>(const BClass &amp;<i> other</i>) const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$BClass-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="bclass.html">BClass</a> class holds Runtime Type Information for a <a href="bobject.html">BObject</a>.</p>
+<p>The <a href="bclass.html">BClass</a> object holds the Runtime Type Information of the <a href="bobject.html">BObject</a> and can be used to compare types and cast BObjects.</p>
+<p>Every <a href="bobject.html">BObject</a> instance has a <a href="bclass.html">BClass</a> instance that can be acquired with <a href="bobject.html#getClass">BObject::getClass</a>().</p>
+<p>Additionally, any classes that inherit from <a href="bobject.html">BObject</a> and use the <a href="bobject.html#B_OBJECT">B_OBJECT</a> macro can statically return a <a href="bclass.html">BClass</a> instance using the getStaticClass() function.</p>
+<p>For example, if you define a subclass of <a href="bobject.html">BObject</a> like so:</p>
+<pre class="cpp"><span class="preprocessor">#include &lt;core/bobject.h&gt;</span>
+
+<span class="keyword">class</span> SubClass : <span class="keyword">public</span> BObject
+{
+     B_OBJECT(SubClass)
+
+<span class="keyword">public</span>:
+     SubClass();
+     <span class="operator">~</span>SubClass();
+};</pre>
+<p>Then you can acquire a <a href="bclass.html">BClass</a> instance in two different ways:</p>
+<pre class="cpp"><span class="preprocessor">#include &quot;subclass.h&quot;</span>
+<span class="preprocessor">#include &lt;qdebug.h&gt;</span>
+
+<span class="type">int</span> main()
+{
+     SubClass instance;
+     BClass instanceClass <span class="operator">=</span> instance<span class="operator">.</span>getClass();
+     BClass staticClass <span class="operator">=</span> SubClass<span class="operator">::</span>getStaticClass();
+
+     qDebug() <span class="operator">&lt;</span><span class="operator">&lt;</span> (instanceClass <span class="operator">=</span><span class="operator">=</span> staticClass);    <span class="comment">// Will print true</span>
+     <span class="keyword">return</span> <span class="number">0</span>;
+}</pre>
+</div>
+<p><b>See also </b><a href="bobject.html">BObject</a>.</p>
+<!-- @@@BClass -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$BClass[overload1]$$$BClassconstBObject& -->
+<h3 class="fn" id="BClass"><a name="BClass"></a>BClass::<span class="name">BClass</span>(const <span class="type"><a href="bobject.html">BObject</a></span> &amp;<i> object</i>)</h3>
+<p>Constructs a new <a href="bclass.html">BClass</a> instance that holds the class information of <i>object</i>.</p>
+<!-- @@@BClass -->
+<!-- $$$BClass$$$BClassconststd::type_index& -->
+<h3 class="fn" id="BClass-2"><a name="BClass-2"></a>BClass::<span class="name">BClass</span>(const <span class="type">std::type_index</span> &amp;<i> type</i>)</h3>
+<!-- @@@BClass -->
+<!-- $$$~BClass[overload1]$$$~BClass -->
+<h3 class="fn" id="dtor.BClass"><a name="dtor.BClass"></a>BClass::<span class="name">~BClass</span>()</h3>
+<p>Destroys a <a href="bclass.html">BClass</a> object.</p>
+<!-- @@@~BClass -->
+<!-- $$$name[overload1]$$$name -->
+<h3 class="fn" id="name"><a name="name"></a>const <span class="type">char</span> * BClass::<span class="name">name</span>() const</h3>
+<p>Returns the name of the class as a <code>const char*</code>.</p>
+<p><b>Note:</b> The name that this function returns is implementation dependent and is rarely exactly equivalent to the name of the class.</p>
+<!-- @@@name -->
+<!-- $$$operator!=[overload1]$$$operator!=constBClass& -->
+<h3 class="fn" id="operator-not-eq"><a name="operator-not-eq"></a><span class="type">bool</span> BClass::<span class="name">operator!=</span>(const <span class="type"><a href="bclass.html#BClass">BClass</a></span> &amp;<i> other</i>) const</h3>
+<p>Compares two <a href="bclass.html">BClass</a> objects for inequality.</p>
+<p>Returns <code>true</code> if this and <i>other</i> refer to different types, <code>false</code> otherwise.</p>
+<!-- @@@operator!= -->
+<!-- $$$operator==[overload1]$$$operator==constBClass& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><span class="type">bool</span> BClass::<span class="name">operator==</span>(const <span class="type"><a href="bclass.html#BClass">BClass</a></span> &amp;<i> other</i>) const</h3>
+<p>Compares two <a href="bclass.html">BClass</a> objects for equality.</p>
+<p>Returns <code>true</code> if this and <i>other</i> refer to the same type, <code>false</code> otherwise.</p>
+<!-- @@@operator== -->
+</div>
+</body>
+</html>

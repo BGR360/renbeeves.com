@@ -58,7 +58,9 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#macros">Macros</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#subclassing-bobject">Subclassing BObject</a></li>
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
@@ -78,12 +80,33 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bobject.html#BObject">BObject</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="bobject.html#dtor.BObject">~BObject</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const BClass &amp; </td><td class="memItemRight bottomAlign"><b><a href="bobject.html#getClass">getClass</a></b>() const</td></tr>
+</table></div>
+<a name="macros"></a>
+<h2 id="macros">Macros</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bobject.html#B_OBJECT">B_OBJECT</a></b>(<i> className</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$BObject-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>The <a href="bobject.html">BObject</a> class is the base class of all classes in the Bengine.</p>
+<p>The <a href="bobject.html">BObject</a> class is a lightweight base class for all classes that belong the the engine. All <a href="bobject.html">BObject</a> subclasses are prefixed with a 'B', just like all Qt classes are prefixed with a 'Q'.</p>
+<a name="subclassing-bobject"></a>
+<h3 >Subclassing BObject</h3>
+<p>In order to subclass <a href="bobject.html">BObject</a>, you must include the <a href="bobject.html#B_OBJECT">B_OBJECT</a> macro somewhere in the class declaration:</p>
+<pre class="cpp"><span class="preprocessor">#include &lt;core/bobject.h&gt;</span>
+
+<span class="keyword">class</span> SubClass : <span class="keyword">public</span> BObject
+{
+     B_OBJECT(SubClass)
+
+<span class="keyword">public</span>:
+     SubClass();
+     <span class="operator">~</span>SubClass();
+};</pre>
+<p>This macro does some background magic which will allow the engine to supply things like static type info (see the <a href="bclass.html">BClass</a> documentation) through the getStaticClass() function.</p>
 </div>
 <!-- @@@BObject -->
 <div class="func">
@@ -96,6 +119,27 @@
 <h3 class="fn" id="dtor.BObject"><a name="dtor.BObject"></a><code>[virtual] </code>BObject::<span class="name">~BObject</span>()</h3>
 <p>Destroys a <a href="bobject.html">BObject</a>.</p>
 <!-- @@@~BObject -->
+<!-- $$$getClass[overload1]$$$getClass -->
+<h3 class="fn" id="getClass"><a name="getClass"></a>const <span class="type"><a href="bclass.html">BClass</a></span> &amp; BObject::<span class="name">getClass</span>() const</h3>
+<p>Returns the type of this <a href="bobject.html">BObject</a> as a <a href="bclass.html">BClass</a> instance.</p>
+<!-- @@@getClass -->
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+<!-- $$$B_OBJECT[overload1]$$$B_OBJECT -->
+<h3 class="fn" id="B_OBJECT"><a name="B_OBJECT"></a><span class="name">B_OBJECT</span>(<i> className</i>)</h3>
+<p>Include this macro in your class definition when subclassing <a href="bobject.html">BObject</a>. To use this macro, include the name of your class in the <i>className</i> parameter, as such:</p>
+<pre class="cpp"><span class="preprocessor">#include &lt;core/bobject.h&gt;</span>
+
+<span class="keyword">class</span> SubClass : <span class="keyword">public</span> BObject
+{
+     B_OBJECT(SubClass)
+
+<span class="keyword">public</span>:
+     SubClass();
+     <span class="operator">~</span>SubClass();
+};</pre>
+<!-- @@@B_OBJECT -->
 </div>
 </body>
 </html>

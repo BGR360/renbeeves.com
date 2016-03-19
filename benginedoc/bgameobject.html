@@ -77,12 +77,27 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#BGameObject">BGameObject</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#dtor.BGameObject">~BGameObject</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#addChild">addChild</a></b>(BGameObject *<i> child</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#addComponent">addComponent</a></b>(BGameComponent *<i> component</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;BGameComponent *&gt; </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#getComponents">getComponents</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> BGameObject * </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#getParent">getParent</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVector&lt;BGameObject *&gt; &amp; </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#getChildren">getChildren</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVector&lt;BGameComponent *&gt; &amp; </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#getComponents">getComponents</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BGameObject * </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#getParent">getParent</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const BGameObject * </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#getParent-2">getParent</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#hasChildren">hasChildren</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#hasParent">hasParent</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#isAncestorOf">isAncestorOf</a></b>(const BGameObject *<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#isChildOf">isChildOf</a></b>(const BGameObject *<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#isDescendentOf">isDescendentOf</a></b>(const BGameObject *<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#isParentOf">isParentOf</a></b>(const BGameObject *<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#numChildren">numChildren</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#numComponents">numComponents</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#removeChild">removeChild</a></b>(BGameObject *<i> child</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#removeComponent">removeComponent</a></b>(BGameComponent *<i> component</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#setParent">setParent</a></b>(BGameObject *<i> parent</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="bgameobject.html#setParent">setParent</a></b>(BGameObject *<i> newParent</i>)</td></tr>
 </table></div>
+<ul>
+<li class="fn">1 public function inherited from <a href="bobject.html#public-functions">BObject</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$BGameObject-description -->
 <div class="descr">
@@ -102,30 +117,84 @@
 <h3 class="fn" id="dtor.BGameObject"><a name="dtor.BGameObject"></a><code>[virtual] </code>BGameObject::<span class="name">~BGameObject</span>()</h3>
 <p>Destroys a <a href="bgameobject.html">BGameObject</a>.</p>
 <!-- @@@~BGameObject -->
+<!-- $$$addChild[overload1]$$$addChildBGameObject* -->
+<h3 class="fn" id="addChild"><a name="addChild"></a><span class="type">void</span> BGameObject::<span class="name">addChild</span>(<span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *<i> child</i>)</h3>
+<p>Designates <i>child</i> as a child of this game object.</p>
+<p>If <i>child</i> is already a child of this or any other game object, it will not be added as a child to this.</p>
+<!-- @@@addChild -->
 <!-- $$$addComponent[overload1]$$$addComponentBGameComponent* -->
 <h3 class="fn" id="addComponent"><a name="addComponent"></a><span class="type">void</span> BGameObject::<span class="name">addComponent</span>(<span class="type"><a href="bgamecomponent.html">BGameComponent</a></span> *<i> component</i>)</h3>
 <p>Adds <i>component</i> to this object's list of components.</p>
-<p>Automatically sets the parent of <i>component</i> to <code>this</code>.</p>
+<p>If <i>component</i> already belongs to this object, it will not be added again. Also, if <i>component</i> already belongs to another <a href="bgameobject.html">BGameObject</a>, it will not be added to this. If the component is added, it automatically sets the owner of <i>component</i> to <code>this</code>.</p>
 <p><b>Note:</b> A <a href="bgameobject.html">BGameObject</a> has ownership of its <a href="bgamecomponent.html">BGameComponent</a> objects and is responsible for deleting them.</p>
 <!-- @@@addComponent -->
+<!-- $$$getChildren[overload1]$$$getChildren -->
+<h3 class="fn" id="getChildren"><a name="getChildren"></a>const <span class="type">QVector</span>&lt;<span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *&gt; &amp; BGameObject::<span class="name">getChildren</span>() const</h3>
+<p>Returns a list of this object's child game objects.</p>
+<!-- @@@getChildren -->
 <!-- $$$getComponents[overload1]$$$getComponents -->
-<h3 class="fn" id="getComponents"><a name="getComponents"></a><span class="type">QVector</span>&lt;<span class="type"><a href="bgamecomponent.html">BGameComponent</a></span> *&gt; BGameObject::<span class="name">getComponents</span>() const</h3>
+<h3 class="fn" id="getComponents"><a name="getComponents"></a>const <span class="type">QVector</span>&lt;<span class="type"><a href="bgamecomponent.html">BGameComponent</a></span> *&gt; &amp; BGameObject::<span class="name">getComponents</span>() const</h3>
 <p>Returns the game components that this <a href="bgameobject.html">BGameObject</a> has.</p>
 <!-- @@@getComponents -->
 <!-- $$$getParent[overload1]$$$getParent -->
-<h3 class="fn" id="getParent"><a name="getParent"></a><span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> * BGameObject::<span class="name">getParent</span>() const</h3>
+<h3 class="fn" id="getParent"><a name="getParent"></a><span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> * BGameObject::<span class="name">getParent</span>()</h3>
 <p>Returns the parent <a href="bgameobject.html">BGameObject</a> of this object.</p>
 <p>If the <a href="bgameobject.html">BGameObject</a> has no parent, returns <code>null</code>.</p>
 <!-- @@@getParent -->
+<!-- $$$getParent$$$getParent -->
+<h3 class="fn" id="getParent-2"><a name="getParent-2"></a>const <span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> * BGameObject::<span class="name">getParent</span>() const</h3>
+<p>Returns the parent <a href="bgameobject.html">BGameObject</a> of this object.</p>
+<p>If the <a href="bgameobject.html">BGameObject</a> has no parent, returns <code>null</code>.</p>
+<!-- @@@getParent -->
+<!-- $$$hasChildren[overload1]$$$hasChildren -->
+<h3 class="fn" id="hasChildren"><a name="hasChildren"></a><span class="type">bool</span> BGameObject::<span class="name">hasChildren</span>() const</h3>
+<p>Returns <code>true</code> if this game object has any child game objects, <code>false</code> otherwise.</p>
+<!-- @@@hasChildren -->
+<!-- $$$hasParent[overload1]$$$hasParent -->
+<h3 class="fn" id="hasParent"><a name="hasParent"></a><span class="type">bool</span> BGameObject::<span class="name">hasParent</span>() const</h3>
+<p>Returns <code>true</code> if this game object has a parent, <code>false</code> if it is the root object.</p>
+<!-- @@@hasParent -->
+<!-- $$$isAncestorOf[overload1]$$$isAncestorOfconstBGameObject* -->
+<h3 class="fn" id="isAncestorOf"><a name="isAncestorOf"></a><span class="type">bool</span> BGameObject::<span class="name">isAncestorOf</span>(const <span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *<i> other</i>) const</h3>
+<p>Returns <code>true</code> if there is a chain of children which connects this game object to <i>other</i>, <code>false</code> otherwise.</p>
+<!-- @@@isAncestorOf -->
+<!-- $$$isChildOf[overload1]$$$isChildOfconstBGameObject* -->
+<h3 class="fn" id="isChildOf"><a name="isChildOf"></a><span class="type">bool</span> BGameObject::<span class="name">isChildOf</span>(const <span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *<i> other</i>) const</h3>
+<p>Returns <code>true</code> if this object is a <b>direct</b> child of <i>other</i>, <code>false</code> otherwise.</p>
+<!-- @@@isChildOf -->
+<!-- $$$isDescendentOf[overload1]$$$isDescendentOfconstBGameObject* -->
+<h3 class="fn" id="isDescendentOf"><a name="isDescendentOf"></a><span class="type">bool</span> BGameObject::<span class="name">isDescendentOf</span>(const <span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *<i> other</i>) const</h3>
+<p>Returns <code>true</code> if there is a chain of parent game objects that connect this object to <i>other</i>, <code>false</code> otherwise.</p>
+<!-- @@@isDescendentOf -->
+<!-- $$$isParentOf[overload1]$$$isParentOfconstBGameObject* -->
+<h3 class="fn" id="isParentOf"><a name="isParentOf"></a><span class="type">bool</span> BGameObject::<span class="name">isParentOf</span>(const <span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *<i> other</i>) const</h3>
+<p>Returns <code>true</code> if this object is a <b>direct</b> parent of <i>other</i>, <code>false</code> otherwise.</p>
+<!-- @@@isParentOf -->
+<!-- $$$numChildren[overload1]$$$numChildren -->
+<h3 class="fn" id="numChildren"><a name="numChildren"></a><span class="type">int</span> BGameObject::<span class="name">numChildren</span>() const</h3>
+<p>Returns the number of child game objects that this object has.</p>
+<!-- @@@numChildren -->
+<!-- $$$numComponents[overload1]$$$numComponents -->
+<h3 class="fn" id="numComponents"><a name="numComponents"></a><span class="type">int</span> BGameObject::<span class="name">numComponents</span>() const</h3>
+<p>Returns the number of <a href="bgamecomponent.html">BGameComponent</a> objects owned by this object.</p>
+<!-- @@@numComponents -->
+<!-- $$$removeChild[overload1]$$$removeChildBGameObject* -->
+<h3 class="fn" id="removeChild"><a name="removeChild"></a><span class="type">bool</span> BGameObject::<span class="name">removeChild</span>(<span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *<i> child</i>)</h3>
+<p>Designates that <i>child</i> should no longer be a child of this game object.</p>
+<p>Returns <code>true</code> if <i>child</i> was initially a child of this game object and if it was removed, <code>false</code> otherwise.</p>
+<!-- @@@removeChild -->
 <!-- $$$removeComponent[overload1]$$$removeComponentBGameComponent* -->
 <h3 class="fn" id="removeComponent"><a name="removeComponent"></a><span class="type">bool</span> BGameObject::<span class="name">removeComponent</span>(<span class="type"><a href="bgamecomponent.html">BGameComponent</a></span> *<i> component</i>)</h3>
 <p>Removes a <a href="bgamecomponent.html">BGameComponent</a> from the object.</p>
 <p>Automatically sets the parent of <i>component</i> to <code>null</code> if removed.</p>
 <p>Returns <code>true</code> if <i>component</i> was owned by this <a href="bgameobject.html">BGameObject</a> and removed; <code>false</code> otherwise.</p>
+<p><b>Note:</b> If you remove a <a href="bgamecomponent.html">BGameComponent</a> from a <a href="bgameobject.html">BGameObject</a>, it is <b>your</b> responsibility to free its memory to avoid a memory leak.</p>
 <!-- @@@removeComponent -->
 <!-- $$$setParent[overload1]$$$setParentBGameObject* -->
-<h3 class="fn" id="setParent"><a name="setParent"></a><span class="type">void</span> BGameObject::<span class="name">setParent</span>(<span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *<i> parent</i>)</h3>
-<p>Sets the parent <a href="bgameobject.html">BGameObject</a> of this game object to <i>parent</i>.</p>
+<h3 class="fn" id="setParent"><a name="setParent"></a><span class="type">void</span> BGameObject::<span class="name">setParent</span>(<span class="type"><a href="bgameobject.html#BGameObject">BGameObject</a></span> *<i> newParent</i>)</h3>
+<p>Sets the parent <a href="bgameobject.html">BGameObject</a> of this game object to <i>newParent</i>.</p>
+<p>If this object was previously the child of another game object, it will notify the other game object that it's about to peace out.</p>
+<p><b>See also </b><a href="bgameobject.html#hasParent">hasParent</a>().</p>
 <!-- @@@setParent -->
 </div>
 </body>

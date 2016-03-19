@@ -57,14 +57,32 @@
 <div class="context">
 <h1 class="title">List of All Members for BGameObject</h1>
 <p>This is the complete list of members for <a href="bgameobject.html">BGameObject</a>, including inherited members.</p>
-<ul>
+<div class="table"><table class="propsummary">
+<tr><td class="topAlign"><ul>
 <li class="fn"><span class="name"><b><a href="bgameobject.html#BGameObject">BGameObject</a></b></span>()</li>
 <li class="fn"><span class="name"><b><a href="bgameobject.html#dtor.BGameObject">~BGameObject</a></b></span>()</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#addChild">addChild</a></b></span>(BGameObject *)</li>
 <li class="fn"><span class="name"><b><a href="bgameobject.html#addComponent">addComponent</a></b></span>(BGameComponent *)</li>
-<li class="fn"><span class="name"><b><a href="bgameobject.html#getComponents">getComponents</a></b></span>() const : QVector&lt;BGameComponent *&gt;</li>
-<li class="fn"><span class="name"><b><a href="bgameobject.html#getParent">getParent</a></b></span>() const : BGameObject *</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#getChildren">getChildren</a></b></span>() const : const QVector&lt;BGameObject *&gt; &amp;</li>
+<li class="fn"><span class="name"><b><a href="bobject.html#getClass">getClass</a></b></span>() const : const BClass &amp;</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#getComponents">getComponents</a></b></span>() const : const QVector&lt;BGameComponent *&gt; &amp;</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#getParent">getParent</a></b></span>() : BGameObject *</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#getParent-2">getParent</a></b></span>() const : const BGameObject *</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#hasChildren">hasChildren</a></b></span>() const : bool</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#hasParent">hasParent</a></b></span>() const : bool</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#isAncestorOf">isAncestorOf</a></b></span>(const BGameObject *) const : bool</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#isChildOf">isChildOf</a></b></span>(const BGameObject *) const : bool</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#isDescendentOf">isDescendentOf</a></b></span>(const BGameObject *) const : bool</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#isParentOf">isParentOf</a></b></span>(const BGameObject *) const : bool</li>
+<li class="fn"><span class="name"><b><a href="bobject.html#m_class-var">m_class</a></b></span> : BClass</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#numChildren">numChildren</a></b></span>() const : int</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#numComponents">numComponents</a></b></span>() const : int</li>
+<li class="fn"><span class="name"><b><a href="bgameobject.html#removeChild">removeChild</a></b></span>(BGameObject *) : bool</li>
 <li class="fn"><span class="name"><b><a href="bgameobject.html#removeComponent">removeComponent</a></b></span>(BGameComponent *) : bool</li>
 <li class="fn"><span class="name"><b><a href="bgameobject.html#setParent">setParent</a></b></span>(BGameObject *)</li>
 </ul>
+</td></tr>
+</table></div>
 </body>
 </html>
