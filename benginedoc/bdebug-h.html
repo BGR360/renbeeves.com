@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- bdebug.qdoc -->
+  <title>&lt;bdebug.h&gt; - Debug Logging Macros | Bengine </title>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
+   <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' />
+   <link rel='stylesheet' type='text/css' href='style/online.css'/>
+   <script src= https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js></script>
+   <script type='text/javascript' src='scripts/main.js'></script>
+</head>
+<body>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+                <div class="navbar-header clearfix">
+                    <a href="#" class="navbar-toggle">
+                        <figure>
+                            <span class="line"></span>
+                        </figure>
+                        <span>Menu</span>
+                    </a>
+                    <a href="http://qt.io/" class="navbar-oneQt retina" data-icon="">
+                    </a>
+                    <nav class="navbar-menu clearfix" role="navigation">
+                        <ul id="mainmenu" class="menu">
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="index.html">Documentation</a></li>
+<li id="menu-item-12207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12207"><a href="http://github.com/bgr360/Bengine/">Source Code</a></li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul class="sub-navigation">
+        <li><a href="http://wiki.qt.io/">Qt Wiki</a></li>
+        <li><a href="http://doc.qt.io/" class="active">Qt Documentation</a></li>
+        <li><a href="http://bgr360.github.io/">Ben Reeves' Website</a></li>
+    </ul>
+    <div id="main_title_bar">
+        <h1>Bengine Documentation</h1>
+    </div>
+    <ul>
+<li>&lt;bdebug.h&gt; - Debug Logging Macros</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">&lt;bdebug.h&gt; - Debug Logging Macros</h1>
+<span class="subtitle"></span>
+<!-- $$$<bdebug.h>-brief -->
+<p>The &lt;bdebug.h&gt; header file provides useful macros for generating debug and error messages. <a href="#details">More...</a></p>
+<!-- @@@<bdebug.h> -->
+<ul>
+</ul>
+<a name="Macros"></a>
+<h2 id="Macros">Macros</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bdebug-h.html#B_CRITICAL">B_CRITICAL</a></b>(<i> message</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bdebug-h.html#B_DEBUG">B_DEBUG</a></b>(<i> message</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bdebug-h.html#B_FATAL">B_FATAL</a></b>(<i> message</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bdebug-h.html#B_INFO">B_INFO</a></b>(<i> message</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bdebug-h.html#B_WARN">B_WARN</a></b>(<i> message</i>)</td></tr>
+</table></div>
+<!-- $$$<bdebug.h>-description -->
+<div class="descr"> <a name="details"></a>
+<p>Use these handy macros to do all of your debugging and error reporting.</p>
+</div>
+<!-- @@@<bdebug.h> -->
+<h2>Macro Documentation</h2>
+<!-- $$$B_CRITICAL[overload1]$$$B_CRITICAL -->
+<h3 class="fn" id="B_CRITICAL"><a name="B_CRITICAL"></a><span class="name">B_CRITICAL</span>(<i> message</i>)</h3>
+<p>Prints a critical error message or a system error message.</p>
+<p>Along with <a href="bdebug-h.html#B_WARN">B_WARN</a>, you can use this macro to report recoverable errors in your code. Use it rarely, for errors that are more serious than warnings but are still recoverable. This macro will not terminate the program.</p>
+<p>The <i>message</i> parameter can be either a c-string, QString, number, or pretty much anything that can be inserted using <code>&lt;&lt;</code> into the qDebug() stream.</p>
+<!-- @@@B_CRITICAL -->
+<!-- $$$B_DEBUG[overload1]$$$B_DEBUG -->
+<h3 class="fn" id="B_DEBUG"><a name="B_DEBUG"></a><span class="name">B_DEBUG</span>(<i> message</i>)</h3>
+<p>Prints a debug message.</p>
+<p>The <i>message</i> parameter can be either a c-string, QString, number, or pretty much anything that can be inserted using <code>&lt;&lt;</code> into the qDebug() stream.</p>
+<!-- @@@B_DEBUG -->
+<!-- $$$B_FATAL[overload1]$$$B_FATAL -->
+<h3 class="fn" id="B_FATAL"><a name="B_FATAL"></a><span class="name">B_FATAL</span>(<i> message</i>)</h3>
+<p>Prints a fatal error message shortly before terminating the program.</p>
+<p>Only use this macro for truly fatal errors.</p>
+<p>The <i>message</i> parameter can be either a c-string, QString, number, or pretty much anything that can be inserted using <code>&lt;&lt;</code> into the qDebug() stream.</p>
+<!-- @@@B_FATAL -->
+<!-- $$$B_INFO[overload1]$$$B_INFO -->
+<h3 class="fn" id="B_INFO"><a name="B_INFO"></a><span class="name">B_INFO</span>(<i> message</i>)</h3>
+<p>Prints an informational message.</p>
+<p>The <i>message</i> parameter can be either a c-string, QString, number, or pretty much anything that can be inserted using <code>&lt;&lt;</code> into the qDebug() stream.</p>
+<!-- @@@B_INFO -->
+<!-- $$$B_WARN[overload1]$$$B_WARN -->
+<h3 class="fn" id="B_WARN"><a name="B_WARN"></a><span class="name">B_WARN</span>(<i> message</i>)</h3>
+<p>Prints a warning message.</p>
+<p>You should primarily use this macro for any errors that might be encountered in your code. This macro does not terminate the program, so only use it for recoverable/non-fatal errors.</p>
+<p>The <i>message</i> parameter can be either a c-string, QString, number, or pretty much anything that can be inserted using <code>&lt;&lt;</code> into the qDebug() stream.</p>
+<!-- @@@B_WARN -->
+</body>
+</html>

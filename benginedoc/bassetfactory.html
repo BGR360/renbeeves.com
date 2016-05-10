@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- bassetfactory.qdoc -->
+  <title>BAssetFactory Class | Bengine </title>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
+   <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' />
+   <link rel='stylesheet' type='text/css' href='style/online.css'/>
+   <script src= https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js></script>
+   <script type='text/javascript' src='scripts/main.js'></script>
+</head>
+<body>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+                <div class="navbar-header clearfix">
+                    <a href="#" class="navbar-toggle">
+                        <figure>
+                            <span class="line"></span>
+                        </figure>
+                        <span>Menu</span>
+                    </a>
+                    <a href="http://qt.io/" class="navbar-oneQt retina" data-icon="">
+                    </a>
+                    <nav class="navbar-menu clearfix" role="navigation">
+                        <ul id="mainmenu" class="menu">
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="index.html">Documentation</a></li>
+<li id="menu-item-12207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12207"><a href="http://github.com/bgr360/Bengine/">Source Code</a></li>
+                       </ul>
+                    </nav>
+                </div>
+            </div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul class="sub-navigation">
+        <li><a href="http://wiki.qt.io/">Qt Wiki</a></li>
+        <li><a href="http://doc.qt.io/" class="active">Qt Documentation</a></li>
+        <li><a href="http://bgr360.github.io/">Ben Reeves' Website</a></li>
+    </ul>
+    <div id="main_title_bar">
+        <h1>Bengine Documentation</h1>
+    </div>
+    <ul>
+<li>BAssetFactory</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#loading-custom-assets">Loading Custom Assets</a></li>
+<li class="level2"><a href="#registering-asset-factories">Registering Asset Factories</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">BAssetFactory Class</h1>
+<!-- $$$BAssetFactory-brief -->
+<p>The <a href="bassetfactory.html">BAssetFactory</a> class is the interface for all classes which can load, import, and save game assets. <a href="#details">More...</a></p>
+<!-- @@@BAssetFactory -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;BAssetFactory&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="bobject.html">BObject</a></td></tr></table></div><ul>
+<li><a href="bassetfactory-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual BAsset * </td><td class="memItemRight bottomAlign"><b><a href="bassetfactory.html#loadAsset">loadAsset</a></b>(const QString &amp;<i> path</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual BClass </td><td class="memItemRight bottomAlign"><b><a href="bassetfactory.html#supportedClass">supportedClass</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QVector&lt;const char *&gt; </td><td class="memItemRight bottomAlign"><b><a href="bassetfactory.html#supportedExtensions">supportedExtensions</a></b>() const = 0</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 public function inherited from <a href="bobject.html#public-functions">BObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$BAssetFactory-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="bassetfactory.html">BAssetFactory</a> class is the interface for all classes which can load, import, and save game assets.</p>
+<p>In order for the <a href="bassetmanager.html">BAssetManager</a> to be able to load game assets, it needs to have a list of <a href="bassetfactory.html">BAssetFactory</a> objects. Each asset factory is responsible for loading <i>one</i> type of asset.</p>
+<a name="loading-custom-assets"></a>
+<h3 >Loading Custom Assets</h3>
+<p>To give the Bengine the ability to load custom asset types, simply subclass <a href="bassetfactory.html">BAssetFactory</a> and override the necessary methods:</p>
+<p>TODO: Include an example.</p>
+<a name="registering-asset-factories"></a>
+<h3 >Registering Asset Factories</h3>
+<p>To make the <a href="bassetmanager.html">BAssetManager</a> aware of your custom asset factory, you must <i>register</i> it with the asset manager.</p>
+<p>TODO: More information on registering asset factories.</p>
+</div>
+<p><b>See also </b><a href="basset.html">BAsset</a> and <a href="bassetmanager.html">BAssetManager</a>.</p>
+<!-- @@@BAssetFactory -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$loadAsset[overload1]$$$loadAssetconstQString& -->
+<h3 class="fn" id="loadAsset"><a name="loadAsset"></a><code>[pure virtual] </code><span class="type"><a href="basset.html">BAsset</a></span> * BAssetFactory::<span class="name">loadAsset</span>(const <span class="type">QString</span> &amp;<i> path</i>) const</h3>
+<p>Loads the asset from the file path specified by <i>path</i>.</p>
+<p>Returns a pointer the new <a href="basset.html">BAsset</a>, or <code>NULL</code> if the asset failed to load.</p>
+<!-- @@@loadAsset -->
+<!-- $$$supportedClass[overload1]$$$supportedClass -->
+<h3 class="fn" id="supportedClass"><a name="supportedClass"></a><code>[pure virtual] </code><span class="type"><a href="bclass.html">BClass</a></span> BAssetFactory::<span class="name">supportedClass</span>() const</h3>
+<p>Specifies which type of <a href="basset.html">BAsset</a> this factory can load.</p>
+<p>Returns a <a href="bclass.html">BClass</a> instance representing the type of <a href="basset.html">BAsset</a> that this factory loads.</p>
+<p>TODO: add an example</p>
+<!-- @@@supportedClass -->
+<!-- $$$supportedExtensions[overload1]$$$supportedExtensions -->
+<h3 class="fn" id="supportedExtensions"><a name="supportedExtensions"></a><code>[pure virtual] </code><span class="type">QVector</span>&lt;const <span class="type">char</span> *&gt; BAssetFactory::<span class="name">supportedExtensions</span>() const</h3>
+<p>Returns the list of file extensions, as c-strings, that this factory can load from.</p>
+<!-- @@@supportedExtensions -->
+</div>
+</body>
+</html>

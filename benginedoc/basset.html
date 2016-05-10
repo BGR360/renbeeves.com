@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- core.qdoc -->
-  <title>Core Module | Bengine </title>
+<!-- basset.cpp -->
+  <title>BAsset Class | Bengine </title>
    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' />
    <link rel='stylesheet' type='text/css' href='style/online.css'/>
@@ -47,7 +47,7 @@
         <h1>Bengine Documentation</h1>
     </div>
     <ul>
-<li>Core Module</li>
+<li>BAsset</li>
     </ul>
 </div>
 <div class="content">
@@ -57,42 +57,48 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
-<li class="level1"><a href="#classes">Classes</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
-<li class="level2"><a href="#game-objects-and-game-components">Game Objects and Game Components</a></li>
-<li class="level2"><a href="#debugging-and-error-tools">Debugging and Error tools</a></li>
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <div class="context">
-<h1 class="title">Core Module</h1>
-<span class="subtitle"></span>
-<!-- $$$Core-brief -->
-<p>Core contains the core classes of the Bengine. <a href="#details">More...</a></p>
-<!-- @@@Core -->
-<a name="classes"></a>
-<h2 id="classes">Classes</h2>
-<div class="table"><table class="annotated">
-<tr class="odd topAlign"><td class="tblName"><p><a href="bclass.html">BClass</a></p></td><td class="tblDescr"><p>Holds Runtime Type Information for a BObject</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="bclock.html">BClock</a></p></td><td class="tblDescr"><p>High-precision timer used to calculate delta times between frames</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="bgamecomponent.html">BGameComponent</a></p></td><td class="tblDescr"><p>The interface for all Game Components</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="bgameobject.html">BGameObject</a></p></td><td class="tblDescr"><p>The base class for all Game Objects</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="bobject.html">BObject</a></p></td><td class="tblDescr"><p>The base class of all classes in the Bengine</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="bengine.html">Bengine</a></p></td><td class="tblDescr"><p>Some useful functions related to the Game Engine</p></td></tr>
+<h1 class="title">BAsset Class</h1>
+<!-- $$$BAsset-brief -->
+<p>The <a href="basset.html">BAsset</a> class is the base class for all game assets (textures, materials, 3D models, etc.)&#x2e; <a href="#details">More...</a></p>
+<!-- @@@BAsset -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;BAsset&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="bobject.html">BObject</a></td></tr></table></div><ul>
+<li><a href="basset-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="basset.html#BAsset">BAsset</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="basset.html#dtor.BAsset">~BAsset</a></b>()</td></tr>
 </table></div>
-<!-- $$$Core-description -->
+<ul>
+<li class="fn">1 public function inherited from <a href="bobject.html#public-functions">BObject</a></li>
+</ul>
 <a name="details"></a>
+<!-- $$$BAsset-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-</p>
-<p>The Core Module contains all of the core classes of the Bengine.</p>
-<a name="game-objects-and-game-components"></a>
-<h4 >Game Objects and Game Components</h4>
-<p>The main classes of interest are <a href="bgameobject.html">BGameObject</a> and <a href="bgamecomponent.html">BGameComponent</a>.</p>
-<a name="debugging-and-error-tools"></a>
-<h4 >Debugging and Error tools</h4>
-<p>See the documentation for the <a href="bdebug-h.html">&lt;bdebug.h&gt;</a> header file to see how to log debug messages and report errors in the Bengine.</p>
+<p>The <a href="basset.html">BAsset</a> class is the base class for all game assets (textures, materials, 3D models, etc.)&#x2e;</p>
+<p>The <a href="basset.html">BAsset</a> class represents a game asset. Assets should not be instantiated on their own. Instead, you use the <a href="bassetmanager.html">BAssetManager</a>'s request system to retrieve a pointer to an asset.</p>
 </div>
-<!-- @@@Core -->
+<!-- @@@BAsset -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$BAsset[overload1]$$$BAsset -->
+<h3 class="fn" id="BAsset"><a name="BAsset"></a>BAsset::<span class="name">BAsset</span>()</h3>
+<p>Creates a new <a href="basset.html">BAsset</a>. You should not call this function. Use <a href="bassetmanager.html">BAssetManager</a> instead.</p>
+<!-- @@@BAsset -->
+<!-- $$$~BAsset[overload1]$$$~BAsset -->
+<h3 class="fn" id="dtor.BAsset"><a name="dtor.BAsset"></a><code>[virtual] </code>BAsset::<span class="name">~BAsset</span>()</h3>
+<p>Destroys a <a href="basset.html">BAsset</a> by calling release() if necessary.</p>
+<!-- @@@~BAsset -->
+</div>
 </body>
 </html>

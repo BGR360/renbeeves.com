@@ -80,7 +80,11 @@
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#dtor.BClass">~BClass</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> const char * </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#name">name</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#operator-not-eq">operator!=</a></b>(const BClass &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#operator-lt">operator&lt;</a></b>(const BClass &amp;<i> right</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#operator-lt-eq">operator&lt;=</a></b>(const BClass &amp;<i> right</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#operator-eq-eq">operator==</a></b>(const BClass &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#operator-gt">operator&gt;</a></b>(const BClass &amp;<i> right</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="bclass.html#operator-gt-eq">operator&gt;=</a></b>(const BClass &amp;<i> right</i>) const</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$BClass-description -->
@@ -140,11 +144,27 @@
 <p>Compares two <a href="bclass.html">BClass</a> objects for inequality.</p>
 <p>Returns <code>true</code> if this and <i>other</i> refer to different types, <code>false</code> otherwise.</p>
 <!-- @@@operator!= -->
+<!-- $$$operator<[overload1]$$$operator<constBClass& -->
+<h3 class="fn" id="operator-lt"><a name="operator-lt"></a><span class="type">bool</span> BClass::<span class="name">operator&lt;</span>(const <span class="type"><a href="bclass.html#BClass">BClass</a></span> &amp;<i> right</i>) const</h3>
+<p>Used to compare this <a href="bclass.html">BClass</a> with <i>right</i>.</p>
+<!-- @@@operator< -->
+<!-- $$$operator<=[overload1]$$$operator<=constBClass& -->
+<h3 class="fn" id="operator-lt-eq"><a name="operator-lt-eq"></a><span class="type">bool</span> BClass::<span class="name">operator&lt;=</span>(const <span class="type"><a href="bclass.html#BClass">BClass</a></span> &amp;<i> right</i>) const</h3>
+<p>Used to compare this <a href="bclass.html">BClass</a> with <i>right</i>.</p>
+<!-- @@@operator<= -->
 <!-- $$$operator==[overload1]$$$operator==constBClass& -->
 <h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><span class="type">bool</span> BClass::<span class="name">operator==</span>(const <span class="type"><a href="bclass.html#BClass">BClass</a></span> &amp;<i> other</i>) const</h3>
 <p>Compares two <a href="bclass.html">BClass</a> objects for equality.</p>
 <p>Returns <code>true</code> if this and <i>other</i> refer to the same type, <code>false</code> otherwise.</p>
 <!-- @@@operator== -->
+<!-- $$$operator>[overload1]$$$operator>constBClass& -->
+<h3 class="fn" id="operator-gt"><a name="operator-gt"></a><span class="type">bool</span> BClass::<span class="name">operator&gt;</span>(const <span class="type"><a href="bclass.html#BClass">BClass</a></span> &amp;<i> right</i>) const</h3>
+<p>Used to compare this <a href="bclass.html">BClass</a> with <i>right</i>.</p>
+<!-- @@@operator> -->
+<!-- $$$operator>=[overload1]$$$operator>=constBClass& -->
+<h3 class="fn" id="operator-gt-eq"><a name="operator-gt-eq"></a><span class="type">bool</span> BClass::<span class="name">operator&gt;=</span>(const <span class="type"><a href="bclass.html#BClass">BClass</a></span> &amp;<i> right</i>) const</h3>
+<p>Used to compare this <a href="bclass.html">BClass</a> with <i>right</i>.</p>
+<!-- @@@operator>= -->
 </div>
 </body>
 </html>

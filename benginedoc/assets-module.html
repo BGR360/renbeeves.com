@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- landing-page.qdoc -->
-  <title>Welcome | Bengine </title>
+<!-- assets.qdoc -->
+  <title>Assets Module | Bengine </title>
    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' />
    <link rel='stylesheet' type='text/css' href='style/online.css'/>
@@ -47,50 +47,42 @@
         <h1>Bengine Documentation</h1>
     </div>
     <ul>
-<li>Welcome</li>
+<li>Assets Module</li>
     </ul>
 </div>
 <div class="content">
     <div class="line">
         <div class="content mainContent">
-<div class="context">
-<h1 class="title">Welcome</h1>
-<span class="subtitle"></span>
-<!-- $$$index.html-description -->
-<div class="descr"> <a name="details"></a>
-<p>This is the documentation for the Bengine 3D Game Engine.</p>
-<a name="contents"></a>
-<h2 id="contents">Contents</h2>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
 <ul>
-<li><a href="index.html#introduction">Introduction</a></li>
-<li><a href="index.html#getting-started">Getting Started</a></li>
-<li><a href="index.html#api-reference">API Reference</a></li>
-<li><a href="index.html#more">More</a></li>
+<li class="level1"><a href="#classes">Classes</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
-<a name="introduction"></a>
-<h2 id="introduction">Introduction</h2>
-<p>This is a 3D game engine being written by me, <a href="https://bgr360.github.io">Ben Reeves</a>, in C++ using <a href="https://doc.qt.io">the Qt GUI Framework</a>.</p>
-<p>This is currently version 2.0 of the engine. I wrote version 1.0 of the engine over the summer of 2015. You can view the source code for version 1.0 <a href="https://github.com/bgr360/CppGameEngine3D">here</a>. I started version 2.0 in March of 2016, looking to start afresh and revamp the system that I had created the previous year. I learned a lot from making version 1.0, and I am now using that knowledge to create an even better version this time around.</p>
-<a name="getting-started"></a>
-<h2 id="getting-started">Getting Started</h2>
-<p>I don't have a tutorial written for you yet, so just have a look at the <a href="index.html#api-reference">API Reference</a>.</p>
-<a name="api-reference"></a>
-<h2 id="api-reference">API Reference</h2>
-<a name="c-class-reference"></a>
-<h4 >C++ Class Reference</h4>
-<ul>
-<li><a href="classes.html">All C++ Classes</a></li>
-<li><a href="modules.html">Classes by Module</a></li>
-</ul>
-<a name="header-file-documentation"></a>
-<h4 >Header File Documentation</h4>
-<ul>
-<li><a href="bdebug-h.html">&lt;bdebug.h&gt;</a> - Useful debugging and error macros.</li>
-</ul>
-<a name="more"></a>
-<h2 id="more">More</h2>
-<p>More documentation, including tutorials and examples, coming soon!</p>
 </div>
-<!-- @@@index.html -->
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Assets Module</h1>
+<span class="subtitle"></span>
+<!-- $$$Assets-brief -->
+<p>Assets contains classes for manipulating game assets like textures, shaders, and 3D models. <a href="#details">More...</a></p>
+<!-- @@@Assets -->
+<a name="classes"></a>
+<h2 id="classes">Classes</h2>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="basset.html">BAsset</a></p></td><td class="tblDescr"><p>The base class for all game assets (textures, materials, 3D models, etc.)</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="bassetfactory.html">BAssetFactory</a></p></td><td class="tblDescr"><p>The interface for all classes which can load, import, and save game assets</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="bassetmanager.html">BAssetManager</a></p></td><td class="tblDescr"><p>Responsible for managing the state of all the game assets in a scene</p></td></tr>
+</table></div>
+<!-- $$$Assets-description -->
+<a name="details"></a>
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+</p>
+<p>The Assets Module contains classes for manipulating game assets like textures, shaders, and 3D models.</p>
+<p>The module revolves around the <a href="bassetmanager.html">BAssetManager</a> class. Every BScene has its own <a href="bassetmanager.html">BAssetManager</a>.</p>
+</div>
+<!-- @@@Assets -->
 </body>
 </html>
