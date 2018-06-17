@@ -1,5 +1,6 @@
 ---
 layout: home
+title: Home
 ---
 
 Software engineer, musician, designer, builder, and lifelong goofball.

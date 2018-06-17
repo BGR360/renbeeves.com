@@ -38,8 +38,8 @@ date_format_abridged: "%b %-d, %Y"
 
 # Pages to include in the navbar in the header.
 header_pages:
+  - index.md
   - blog.md
-  - about.md
 
 # Build settings
 markdown: kramdown

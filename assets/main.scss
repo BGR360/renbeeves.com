@@ -1,0 +1,31 @@
+---
+# Front matter required, even if empty.
+---
+
+@import "minima";
+
+/**
+ * I don't want the site title always in the header,
+ * so I'm changing the navbar to exclude the
+ * site title (by modifying _includes/header.html)
+ * and display links to pages on the left
+ * (by modifying the .site-nav css class).
+ */
+.site-nav {
+  float: left;
+
+  @include media-query($on-palm) {
+    position: absolute;
+    left: $spacing-unit / 2;
+    right: auto;
+    text-align: left;
+
+    label[for="nav-trigger"] {
+      float: left;
+    }
+
+    .menu-icon {
+      float: left;
+    }
+  }
+}
