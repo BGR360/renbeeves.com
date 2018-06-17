@@ -25,6 +25,9 @@ social:
     - https://soundcloud.com/renbeeves
     - https://youtube.com/channel/UCtnKVh6J7QBbQDgrKm1yA1w
 
+# Analytics
+google_analytics: UA-72821182-3
+
 # Posts
 show_excerpts: true
 date_format: "%b %-d, %Y, %l:%M %p"
