@@ -1,12 +1,4 @@
-# [BGR360.github.io](https://bgr360.github.io)
-My github.io page
+# [renbeeves.com](https://renbeeves.com)
+My personal website.
 
-![](images/screenshots/home.png)
-
-![](images/screenshots/blog.png)
-
-![](images/screenshots/code.png)
-
-![](images/screenshots/toys.png)
-
-![](images/screenshots/more.png)
+Site is powered by [Jekyll](https://github.com/jekyll/jekyll) using the [Minima](https://github.com/jekyll/minima) theme. Hosted by GitHub Pages.

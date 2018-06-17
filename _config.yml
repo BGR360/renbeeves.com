@@ -1,32 +1,46 @@
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Ben Reeves
 author: Ben Reeves
 email: bgreeves@umich.edu
-description: >- # this means to ignore newlines until "baseurl:"
+url: "https://renbeeves.com"
+timezone: America/Chicago
+description: >-
   Software engineer, musician, designer, builder, and lifelong goofball.
   This is my personal website. Here you'll find my blog where
   I write about my hobbies, and links to other pages of mine.
-url: "https://renbeeves.com" # the base hostname & protocol for your site, e.g. http://example.com
+show_last_updated: true
 
 # Social
-linkedin_username: ben-reeves
-github_username:  bgr360
+linkedin_username:   ben-reeves
+github_username:     bgr360
+soundcloud_username: renbeeves
+#youtube_username:    UCtnKVh6J7QBbQDgrKm1yA1w # doesn't work well
+
+# Social (for jekyll-seo-tag plugin)
+social:
+  name: Ben Reeves
+  links:
+    - https://www.linkedin.com/in/ben-reeves
+    - https://github.com/bgr360
+    - https://soundcloud.com/renbeeves
+    - https://youtube.com/channel/UCtnKVh6J7QBbQDgrKm1yA1w
 
 # Posts
 show_excerpts: true
+date_format: "%b %-d, %Y, %l:%M %p"
+date_format_abridged: "%b %-d, %Y"
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 exclude:
   - .gitignore
   - CNAME
   - README.md
+  - TODO.md
