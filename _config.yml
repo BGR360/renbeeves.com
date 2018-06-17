@@ -35,6 +35,7 @@ google_analytics: UA-72821182-3
 # Posts
 date_format: "%b %-d, %Y, %l:%M %p"
 date_format_abridged: "%b %-d, %Y"
+permalink: /:categories/:title:output_ext
 
 # Pages to include in the navbar in the header.
 header_pages:
