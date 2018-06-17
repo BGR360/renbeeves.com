@@ -32,9 +32,13 @@ google_site_verification: KezjFZhbwm4ZVxLWQB_ZJCxQeISqVfqm_RaW6JSzrCY
 google_analytics: UA-72821182-3
 
 # Posts
-show_excerpts: true
 date_format: "%b %-d, %Y, %l:%M %p"
 date_format_abridged: "%b %-d, %Y"
+
+# Pages to include in the navbar in the header.
+header_pages:
+  - blog.md
+  - about.md
 
 # Build settings
 markdown: kramdown

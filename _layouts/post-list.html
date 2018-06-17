@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="post-list">
+  {%- assign posts = page.posts | default: site.posts -%}
+  {%- if posts.size > 0 -%}
+  <h1 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h1>
+  {{ content }}
+  <ul class="post-list">
+    {%- for post in posts -%}
+    <li>
+      {%- assign date_format = site.date_format_abridged | default: site.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {%- assign show_excerpts = page.show_excerpts | default: true -%}
+      {%- if show_excerpts -%}
+        {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- else -%}
+  Nothing to show here!
+  {%- endif -%}
+</div>
