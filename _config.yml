@@ -16,7 +16,7 @@ github_username:     bgr360
 soundcloud_username: renbeeves
 #youtube_username:    UCtnKVh6J7QBbQDgrKm1yA1w # doesn't work well
 
-# Social (for jekyll-seo-tag plugin)
+# Social (for jekyll-seo-tag)
 social:
   name: Ben Reeves
   links:
@@ -24,6 +24,9 @@ social:
     - https://github.com/bgr360
     - https://soundcloud.com/renbeeves
     - https://youtube.com/channel/UCtnKVh6J7QBbQDgrKm1yA1w
+
+# Site ownership verification (for jekyll-seo-tag)
+google_site_verification: KezjFZhbwm4ZVxLWQB_ZJCxQeISqVfqm_RaW6JSzrCY
 
 # Analytics
 google_analytics: UA-72821182-3
