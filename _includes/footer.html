@@ -26,19 +26,24 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+        <ul class="contact-list">
+          <li>
+            {%- if site.repository -%}
+              Source code <a href="{{ site.repository }}">on GitHub</a>.
+            {%- else -%}
+              This website is open-source and hosted on GitHub.
+            {%- endif -%}
+          </li>
+        
+          {%- if site.show_last_updated -%}
+          <li>
+            {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+            Last updated: {{ site.time | date: date_format }}
+          </li>
+          {%- endif -%}
+        </ul>
       </div>
     </div>
-
-    {%- if site.show_last_updated -%}
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-        Site last updated: {{ site.time | date: date_format }}
-      </div>
-    </div>
-    {%- endif -%}
-
   </div>
 
 </footer>
