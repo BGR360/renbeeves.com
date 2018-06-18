@@ -37,6 +37,20 @@ date_format: "%b %-d, %Y, %l:%M %p"
 date_format_abridged: "%b %-d, %Y"
 permalink: /:categories/:title:output_ext
 
+# Post defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      author: "Ben Reeves"
+      comments: true
+
+# Disqus comments
+disqus:
+  shortname: renbeeves
+
 # Pages to include in the navbar in the header.
 header_pages:
   - index.html
