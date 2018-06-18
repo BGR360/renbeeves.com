@@ -29,3 +29,45 @@
     }
   }
 }
+
+/**
+ * This is to configure the side-by-side image and text on the homepage.
+ */
+.home-header {
+  margin-bottom: $spacing-unit;
+  @include relative-font-size(1.25);
+  @extend %clearfix;
+}
+
+.header-col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+}
+
+.profile-img {
+  width: -webkit-calc(35% - (#{$spacing-unit}));
+  width:         calc(35% - (#{$spacing-unit}));
+  margin-right: $spacing-unit;
+}
+
+.home-summary {
+  width: -webkit-calc(65% - (#{$spacing-unit}));
+  width:         calc(65% - (#{$spacing-unit}));
+}
+
+@include media-query($on-palm) {
+  .header-col {
+    float: none;
+  }
+
+  .profile-img {
+    width: -webkit-calc(100%);
+    width:         calc(100%);
+    margin-right: 0;
+  }
+
+  .home-summary {
+    width: -webkit-calc(100%);
+    width:         calc(100%);
+  }
+}

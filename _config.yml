@@ -39,7 +39,7 @@ permalink: /:categories/:title:output_ext
 
 # Pages to include in the navbar in the header.
 header_pages:
-  - index.md
+  - index.html
   - blog.md
 
 # Build settings
