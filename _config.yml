@@ -62,6 +62,8 @@ disqus:
 header_pages:
   - index.html
   - blog.md
+  - music.md
+  - code.md
 
 # Build settings
 markdown: kramdown
