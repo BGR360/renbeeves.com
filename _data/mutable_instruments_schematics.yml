@@ -1,0 +1,74 @@
+# For _posts/2018-06-17-mutable-instruments-schematics.md
+schematics_directory: /assets/pdf/mutable_instruments/
+schematics:
+  - name: Blinds
+    file: blinds_v60.pdf
+
+  - name: Braids
+    file: braids_v50.pdf
+
+  - name: Branches
+    file: branches_v40.pdf
+
+  - name: Clouds
+    file: clouds_v30.pdf
+
+  - name: Ears
+    file: ears_v40.pdf
+
+  - name: Edges
+    files:
+      - edges_v20.pdf
+      - edges_exapander_v01.pdf
+
+  - name: Elements
+    file: elements_v02.pdf
+
+  - name: Frames
+    file: frames_v03.pdf
+
+  - name: Grids
+    file: grids_v02.pdf
+
+  - name: Kinks
+    file: kinks_v41.pdf
+
+  - name: Links
+    file: links_v40.pdf
+
+  - name: Peaks
+    file: peaks_v30.pdf
+
+  - name: Rings
+    file: rings_v30.pdf
+
+  - name: Ripples
+    file: ripples_v40.pdf
+
+  - name: Shades
+    file: shades_v30.pdf
+
+  - name: Shelves
+    files:
+      - shelves_v05.pdf
+      - shelves_expander_v10.pdf
+
+  - name: Streams
+    files:
+      - streams_v05.pdf
+      - streams_v02_bargraph.pdf
+
+  - name: Tides
+    file: tides_v40.pdf
+
+  - name: Veils
+    file: veils_v40.pdf
+
+  - name: Volts
+    file: volts_v01.pdf
+
+  - name: Warps
+    file: warps_v30.pdf
+
+  - name: Yarns
+    file: yarns_v03.pdf
