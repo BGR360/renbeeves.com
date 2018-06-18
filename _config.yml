@@ -42,10 +42,17 @@ defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      breadcrumbs: true
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
       type: "posts"
     values:
       author: "Ben Reeves"
       comments: true
+      breadcrumbs: true
 
 # Disqus comments
 disqus:
@@ -63,6 +70,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Exclude from processing.
 exclude:

@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="post-list">
-  {%- assign posts = page.posts | default: site.posts -%}
+  {%- assign posts = site.category[page.category] | default: site.posts -%}
   {%- if posts.size > 0 -%}
   <h1 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h1>
   {{ content }}

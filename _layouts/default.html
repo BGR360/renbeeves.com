@@ -9,6 +9,9 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
+        {%- if page.breadcrumbs %}
+          {%- include breadcrumb.html %}
+        {%- endif -%}
         {{ content }}
       </div>
     </main>

@@ -1,0 +1,37 @@
+<ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="{% link index.html %}">
+      <span itemprop="name">Home</span>
+    </a>
+    <meta itemprop="position" content="1" />
+  </li>
+
+  {% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+  {% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
+  {% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:2 }}{% endcapture %}
+  {% for i in (1..forLoopMaxInt) %}
+    {% capture current_breadcrumb_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/index.html{% endcapture %}
+    {% capture current_breadcrumb_md_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/{% endcapture %}
+    {% capture next_prepender %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
+    {% for breadcrumb_page in site.pages %}
+      {% if current_breadcrumb_url == breadcrumb_page.url or current_breadcrumb_md_url == breadcrumb_page.url  %}
+      {% assign j = forLoopMaxInt | plus: 0 %}
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          {% capture breadcrumb_page_page_url_without_index_html %}{{ breadcrumb_page.url | remove: "index.html" }}{% endcapture %}
+          {% capture breadcrumb_name %}{{breadcrumb_page.breadcrumb | default: breadcrumb_page.title }}{% endcapture %}
+          <a itemprop="item" href="{{ site.baseurl }}{{breadcrumb_page_page_url_without_index_html}}">
+            <span itemprop="name">{{ breadcrumb_name }}</span>
+          </a>
+          <meta itemprop="position" content="{{i + 1}}" />
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <span class="active" itemprop="item">
+      <span itemprop="name">{{page.title}}</span>
+    </span>
+    <meta itemprop="position" content="{{ splitted_url_parts.size | minus:1 }}" />
+  </li>
+</ol>
