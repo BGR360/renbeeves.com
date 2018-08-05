@@ -6,6 +6,9 @@ date: 2018-06-17 20:00:00 -0500
 categories: blog modular
 excerpt: Here I keep an updated list of schematics, in PDF form, for all Mutable Instruments modules.
 image: /assets/img/mutable-instruments-logo.png
+
+redirect_from:
+  - /blog/modular/mutable-instruments-schematics.html
 ---
 
 ![Mutable Instruments logo](/assets/img/mutable-instruments-logo.png)
