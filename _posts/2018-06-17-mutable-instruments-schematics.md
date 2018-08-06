@@ -11,8 +11,6 @@ redirect_from:
   - /blog/modular/mutable-instruments-schematics.html
 ---
 
-![Mutable Instruments logo](/assets/img/mutable-instruments-logo.png)
-
 ## Description
 
 Not everybody owns EAGLE or wants to go through the trouble of opening it just to view a schematic. Here I keep an updated list of schematics, in PDF form, for all Mutable Instruments modules.

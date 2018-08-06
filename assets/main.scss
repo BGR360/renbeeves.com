@@ -5,6 +5,19 @@
 @import "minima";
 
 /**
+ * I don't want links to darken when visited.
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $brand-color;
+  }
+}
+
+
+/**
  * I don't want the site title always in the header,
  * so I'm changing the navbar to exclude the
  * site title (by modifying _includes/header.html)
@@ -75,4 +88,14 @@
 /**
  * For site breadcrumbs
  */
-@import "breadcrumb"
+@import "breadcrumb";
+
+/**
+ * For post pages
+ */
+@import "post";
+
+/**
+ * For scrolling lists of posts
+ */
+@import "post-list";

@@ -1,0 +1,86 @@
+.post-list-heading {
+  margin-bottom: 1.5rem;
+}
+
+.post-list-item * {
+  box-sizing: border-box;
+}
+
+.post-list-item {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 1rem;
+  overflow: hidden;
+  transition: all .3s ease;
+  border-color: $grey-color-light;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 12px;
+  box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+
+  .post-thumbnail {
+    width: 32%;
+    max-width:  100%;
+    min-height: 11rem;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-right: 1px solid $grey-color-light;
+  }
+
+  .post-content {
+    width: 68%;
+    margin: 0;
+    padding-top:    1rem;
+    padding-bottom: 1rem;
+    padding-left:   1.2rem;
+    padding-right:  1.2rem;
+
+    .post-title {
+      margin-top: 0.3rem;
+      a {
+        color: $text-color;
+      }
+    }
+  }
+
+}
+
+
+/**
+ * Change how posts are stacked on different devices
+ */
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 720px) {
+  .post-list-item {
+    .post-thumbnail {
+      width: 40%;
+    }
+
+    .post-content {
+      width: 60%;
+    }
+  }
+}
+
+/* Very Small Devices, Smartphones */
+@media only screen and (max-width : 480px) {
+  .post-list-item {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+
+    .post-thumbnail {
+      width: 100%;
+    }
+
+    .post-content {
+      width: 100%;
+    }
+  }
+}
+

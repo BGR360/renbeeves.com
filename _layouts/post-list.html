@@ -7,23 +7,28 @@ layout: default
   {%- if posts.size > 0 -%}
   <h1 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h1>
   {{ content }}
-  <ul class="post-list">
-    {%- for post in posts -%}
-    <li>
+  {%- for post in posts -%}
+  <article class="post-list-item">
+    {% if post.image %}
+      <a class="post-thumbnail" style="background-image: url({{ post.image | absolute_url }})" href="{{ post.url | absolute_url }}"></a>
+    {% endif %}
+    <div class="post-content">
       {%- assign date_format = site.date_format_abridged | default: site.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h3>
+      <h3 class="post-title">
         <a class="post-link" href="{{ post.url | relative_url }}">
           {{ post.title | escape }}
         </a>
       </h3>
       {%- assign show_excerpts = page.show_excerpts | default: true -%}
       {%- if show_excerpts -%}
-        {{ post.excerpt }}
+        <span class="post-excerpt">
+          {{ post.excerpt | escapehtml }}
+        </span>
       {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
+    </div>
+  </article>
+  {%- endfor -%}
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- else -%}
