@@ -19,7 +19,7 @@ schematics:
   - name: Edges
     files:
       - edges_v20.pdf
-      - edges_exapander_v01.pdf
+      - edges_expander_v01.pdf
 
   - name: Elements
     file: elements_v02.pdf
